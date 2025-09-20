@@ -1,0 +1,510 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>Millionaire Wealth Mindset Conference</title>\
+    <script src="https://cdn.tailwindcss.com"></script>\
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">\
+    <!-- Firebase SDKs -->\
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js"></script>\
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js"></script>\
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js"></script>\
+\
+    <style>\
+        body \{\
+            font-family: 'Inter', sans-serif;\
+        \}\
+        .text-shadow-custom \{\
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);\
+        \}\
+        .hero-bg \{\
+            background-image: url('uploaded:Gemini_Generated_Image_onmxlqonmxlqonmx.jpg');\
+        \}\
+        .speaker-img \{\
+            aspect-ratio: 1 / 1;\
+            object-fit: cover;\
+        \}\
+    </style>\
+</head>\
+<body class="bg-black text-gray-100 antialiased">\
+    <!-- Main container for the app -->\
+    <div class="relative min-h-screen">\
+        <!-- Navigation Bar -->\
+        <nav class="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-80 backdrop-filter backdrop-blur-sm p-4 md:p-6 shadow-lg">\
+            <div class="container mx-auto flex justify-between items-center">\
+                <!-- Logo with three bars -->\
+                <a href="#" class="flex items-center space-x-2">\
+                    <img src="uploaded:mwm logo (2).png" alt="MWM Conference Logo" class="h-8 w-8 md:h-10 md:w-10">\
+                    <span class="text-xl md:text-2xl font-bold text-gray-100">MWM Conference</span>\
+                </a>\
+                <!-- Mobile Menu Button -->\
+                <button id="mobile-menu-button" class="md:hidden text-gray-100 focus:outline-none">\
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">\
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>\
+                    </svg>\
+                </button>\
+                <!-- Desktop Navigation Links -->\
+                <div class="hidden md:flex space-x-8 text-lg font-medium">\
+                    <a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a>\
+                    <a href="#speakers" class="text-gray-300 hover:text-white transition-colors">Speakers</a>\
+                    <a href="#tickets" class="text-gray-300 hover:text-white transition-colors">Tickets</a>\
+                    <a href="#get-involved" class="text-gray-300 hover:text-white transition-colors">Get Involved</a>\
+                </div>\
+            </div>\
+            <!-- Mobile Menu Dropdown -->\
+            <div id="mobile-menu" class="hidden md:hidden mt-4 text-center">\
+                <a href="#about" class="block py-2 text-gray-300 hover:text-white transition-colors">About</a>\
+                <a href="#speakers" class="block py-2 text-gray-300 hover:text-white transition-colors">Speakers</a>\
+                <a href="#tickets" class="block py-2 text-gray-300 hover:text-white transition-colors">Tickets</a>\
+                <a href="#get-involved" class="block py-2 text-gray-300 hover:text-white transition-colors">Get Involved</a>\
+            </div>\
+        </nav>\
+        \
+        <!-- Hero Section -->\
+        <header id="home" class="min-h-screen flex items-center justify-center text-center p-4 md:p-8 bg-cover bg-center hero-bg">\
+            <div class="bg-black bg-opacity-50 p-6 md:p-12 rounded-xl shadow-2xl max-w-4xl mx-auto">\
+                <h1 class="text-4xl md:text-6xl font-extrabold text-gold-500 mb-4 tracking-tight text-shadow-custom">\
+                    Millionaire Wealth Mindset Conference\
+                </h1>\
+                <p class="text-xl md:text-2xl font-medium text-gray-200 mb-8 text-shadow-custom">\
+                    November 16, 2025 | Cox Pavilion, Las Vegas, NV\
+                </p>\
+                <p class="text-lg md:text-xl text-gray-300 mb-10">\
+                    A transformative, full-day immersive experience designed for individuals ready to ignite inner power, amplify mindset, and invest in their impact across life, business, and finances.\
+                </p>\
+                <a href="#tickets" class="inline-block bg-yellow-400 text-black font-bold text-lg md:text-xl py-3 px-8 rounded-full shadow-lg hover:bg-yellow-500 transition-transform transform hover:scale-105">\
+                    Get Your Tickets Now\
+                </a>\
+            </div>\
+        </header>\
+\
+        <main class="container mx-auto p-4 md:p-8">\
+            <!-- About Section -->\
+            <section id="about" class="my-16">\
+                <div class="text-center mb-12">\
+                    <h2 class="text-3xl md:text-4xl font-bold text-yellow-400 mb-4">About the Conference</h2>\
+                    <p class="text-lg text-gray-300 max-w-3xl mx-auto">\
+                        The Millionaire Wealth Mindset Conference is a faith-driven event designed to empower entrepreneurs, leaders, and visionaries. Our mission is to build generational wealth through purpose and strategy. We provide the clarity, confidence, and systems needed to create lasting legacies.\
+                    </p>\
+                </div>\
+                <div class="grid md:grid-cols-3 gap-8 text-center">\
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:bg-gray-700 transition-colors">\
+                        <h3 class="text-2xl font-semibold text-yellow-300 mb-2">Join a Tribe of Visionaries</h3>\
+                        <p class="text-gray-400">Connect with 3000+ ambitious individuals committed to betting big on their future and building legacies.</p>\
+                    </div>\
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:bg-gray-700 transition-colors">\
+                        <h3 class="text-2xl font-semibold text-yellow-300 mb-2">Fuel Your Growth Mindset</h3>\
+                        <p class="text-gray-400">Immerse in an environment celebrating personal growth and decisive action, attracting those ready to invest in their potential.</p>\
+                    </div>\
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:bg-gray-700 transition-colors">\
+                        <h3 class="text-2xl font-semibold text-yellow-300 mb-2">Align Purpose, Power & Profits</h3>\
+                        <p class="text-gray-400">Discover how self-belief and clear purpose drive generational wealth and profound fulfillment.</p>\
+                    </div>\
+                </div>\
+            </section>\
+            \
+            <!-- Speakers Section -->\
+            <section id="speakers" class="my-16">\
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-yellow-400 mb-12">Founders</h2>\
+                <div class="grid md:grid-cols-2 gap-12 mb-12">\
+                    <!-- Marquetta DeVille card -->\
+                    <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden">\
+                        <div class="overflow-hidden">\
+                            <img class="w-full speaker-img transition-transform transform hover:scale-110" src="uploaded:marquettadeville.com (1).jpeg" alt="Marquetta DeVille speaking">\
+                        </div>\
+                        <div class="p-6 md:p-8 flex flex-col justify-center">\
+                            <h3 class="text-2xl font-semibold text-white mb-2">Marquetta DeVille</h3>\
+                            <p class="text-yellow-400 text-lg font-medium mb-4">International Speaker, Author, Educator, Minister</p>\
+                            <p class="text-gray-300">\
+                                Marquetta DeVille is on a mission to inspire others to rise above adversity and embrace possibility. Blending ministry with proven wealth mindset principles, she empowers you to "Bet On You" and build lasting generational wealth.\
+                            </p>\
+                        </div>\
+                    </div>\
+                    <!-- King Jermaine Jones card -->\
+                    <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden">\
+                        <div class="overflow-hidden">\
+                            <img class="w-full speaker-img transition-transform transform hover:scale-110" src="uploaded:king we paying it forward photo (1).jpeg" alt="King Jermaine Jones speaking">\
+                        </div>\
+                        <div class="p-6 md:p-8 flex flex-col justify-center">\
+                            <h3 class="text-2xl font-semibold text-white mb-2">King Jermaine Jones</h3>\
+                            <p class="text-yellow-400 text-lg font-medium mb-4">Entrepreneur, VC, Philanthropist</p>\
+                            <p class="text-gray-300">\
+                                From adversity, King Jermaine Jones emerged with purpose. His journey is the ultimate "Bet On You" story, building a successful empire against all odds. He now inspires others to cultivate generosity, resilience, and architect wealthy, purposeful lives.\
+                            </p>\
+                        </div>\
+                    </div>\
+                </div>\
+\
+                <h2 class="text-3xl md:text-4xl font-bold text-center text-yellow-400 mb-12">Featured Speakers</h2>\
+                <div class="grid md:grid-cols-3 gap-12">\
+                    <!-- Shaundell Newsome card -->\
+                    <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden">\
+                        <div class="overflow-hidden">\
+                            <img class="w-full speaker-img transition-transform transform hover:scale-110" src="uploaded:Gemini_Generated_Image_k2hz70k2hz70k2hz (1).jpg" alt="Shaundell Newsome photo">\
+                        </div>\
+                        <div class="p-6 md:p-8 flex flex-col justify-center">\
+                            <h3 class="text-2xl font-semibold text-white mb-2">Shaundell Newsome</h3>\
+                            <p class="text-yellow-400 text-lg font-medium mb-4">Entrepreneur, Mentor, Financial Strategist</p>\
+                            <p class="text-gray-300">\
+                                Shaundell is a powerful voice in the wealth-building community, inspiring individuals to take control of their financial destiny. He is dedicated to helping others leverage their potential to achieve lasting success and generational wealth.\
+                            </p>\
+                        </div>\
+                    </div>\
+                    <!-- Dr. Melvin King & Tiffany Ward card -->\
+                    <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden">\
+                        <div class="overflow-hidden">\
+                            <img class="w-full speaker-img transition-transform transform hover:scale-110" src="uploaded:tiffany ward  and dr. melvin king of inspire works hr (1).jpeg" alt="Dr. Melvin King and Tiffany Ward">\
+                        </div>\
+                        <div class="p-6 md:p-8 flex flex-col justify-center">\
+                            <h3 class="text-2xl font-semibold text-white mb-2">Dr. Melvin King & Tiffany Ward</h3>\
+                            <p class="text-yellow-400 text-lg font-medium mb-4">Founders of Inspire Works HR</p>\
+                            <p class="text-gray-300">\
+                                As founders of Inspire Works HR, Dr. King and Tiffany empower businesses and leaders to build strong teams and foster growth. They bring expertise in human resources and organizational development to help others succeed.\
+                            </p>\
+                        </div>\
+                    </div>\
+                    <!-- Steven Ness card -->\
+                    <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden">\
+                        <div class="overflow-hidden">\
+                            <img class="w-full speaker-img transition-transform transform hover:scale-110" src="uploaded:steven ness (1).jpeg" alt="Steven Ness">\
+                        </div>\
+                        <div class="p-6 md:p-8 flex flex-col justify-center">\
+                            <h3 class="text-2xl font-semibold text-white mb-2">Steven Ness</h3>\
+                            <p class="text-yellow-400 text-lg font-medium mb-4">Growth Strategist</p>\
+                            <p class="text-gray-300">\
+                                Steven is a passionate growth strategist who helps entrepreneurs and business owners unlock their full potential. He provides actionable insights and proven methods to scale businesses and amplify personal success.\
+                            </p>\
+                        </div>\
+                    </div>\
+                    <!-- Elias B. card -->\
+                    <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden">\
+                        <div class="overflow-hidden">\
+                            <img class="w-full speaker-img transition-transform transform hover:scale-110" src="uploaded:elias b photo kcep (1).jpeg" alt="Elias B.">\
+                        </div>\
+                        <div class="p-6 md:p-8 flex flex-col justify-center">\
+                            <h3 class="text-2xl font-semibold text-white mb-2">Elias B.</h3>\
+                            <p class="text-yellow-400 text-lg font-medium mb-4">Media Personality</p>\
+                            <p class="text-gray-300">\
+                                As a well-known media personality, Elias B. uses his platform to share stories of success and inspire a wealth-building mindset. His engaging approach motivates audiences to pursue their dreams and create a better future.\
+                            </p>\
+                        </div>\
+                    </div>\
+                    <!-- Jon S. card -->\
+                    <div class="bg-gray-800 rounded-lg shadow-xl overflow-hidden">\
+                        <div class="overflow-hidden">\
+                            <img class="w-full speaker-img transition-transform transform hover:scale-110" src="uploaded:jon s (1).jpeg" alt="Jon S.">\
+                        </div>\
+                        <div class="p-6 md:p-8 flex flex-col justify-center">\
+                            <h3 class="text-2xl font-semibold text-white mb-2">Jon S.</h3>\
+                            <p class="text-yellow-400 text-lg font-medium mb-4">Entrepreneur and Business Coach</p>\
+                            <p class="text-gray-300">\
+                                Jon S. is a seasoned entrepreneur and business coach dedicated to helping others navigate the path to financial freedom. He offers practical advice and strategic guidance to build and sustain successful ventures.\
+                            </p>\
+                        </div>\
+                    </div>\
+                </div>\
+            </section>\
+            \
+            <!-- Tickets Section -->\
+            <section id="tickets" class="my-16 text-center">\
+                <h2 class="text-3xl md:text-4xl font-bold text-yellow-400 mb-12">Ticket Pricing</h2>\
+                <div class="grid md:grid-cols-3 gap-8">\
+                    <!-- General Admission -->\
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-xl transform transition-transform hover:scale-105">\
+                        <h3 class="text-3xl font-bold text-white mb-2">General Admission</h3>\
+                        <p class="text-5xl font-extrabold text-yellow-400 mb-4">$197</p>\
+                        <ul class="text-left text-gray-300 space-y-2 mb-6">\
+                            <li><svg class="w-5 h-5 inline-block mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Full Conference Access</li>\
+                            <li><svg class="w-5 h-5 inline-block mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Keynotes, Panels & Sessions</li>\
+                            <li><svg class="w-5 h-5 inline-block mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Networking Opportunities</li>\
+                        </ul>\
+                        <button class="w-full bg-yellow-400 text-black font-bold py-3 rounded-full hover:bg-yellow-500 transition-colors">\
+                            Get Tickets\
+                        </button>\
+                    </div>\
+                    <!-- VIP Access -->\
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-xl border-2 border-yellow-400 transform transition-transform hover:scale-105">\
+                        <h3 class="text-3xl font-bold text-white mb-2">VIP Access</h3>\
+                        <p class="text-5xl font-extrabold text-yellow-400 mb-4">$555</p>\
+                        <ul class="text-left text-gray-300 space-y-2 mb-6">\
+                            <li><svg class="w-5 h-5 inline-block mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Everything in General Admission</li>\
+                            <li><svg class="w-5 h-5 inline-block mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Preferred Seating & Early Access</li>\
+                            <li><svg class="w-5 h-5 inline-block mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> VIP Power Mixer Access</li>\
+                            <li><svg class="w-5 h-5 inline-block mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Private Networking Reception</li>\
+                        </ul>\
+                        <button class="w-full bg-yellow-400 text-black font-bold py-3 rounded-full hover:bg-yellow-500 transition-colors">\
+                            Get VIP Tickets\
+                        </button>\
+                    </div>\
+                    <!-- Millionaire Circle -->\
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-xl transform transition-transform hover:scale-105">\
+                        <h3 class="text-3xl font-bold text-white mb-2">Millionaire Circle</h3>\
+                        <p class="text-5xl font-extrabold text-yellow-400 mb-4">$1,111</p>\
+                        <ul class="text-left text-gray-300 space-y-2 mb-6">\
+                            <li><svg class="w-5 h-5 inline-block mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Everything in VIP Access</li>\
+                            <li><svg class="w-5 h-5 inline-block mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Preferred Floor Seating</li>\
+                            <li><svg class="w-5 h-5 inline-block mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Plated Meal Service</li>\
+                            <li><svg class="w-5 h-5 inline-block mr-2 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg> Exclusive Meet & Greet</li>\
+                        </ul>\
+                        <button class="w-full bg-yellow-400 text-black font-bold py-3 rounded-full hover:bg-yellow-500 transition-colors">\
+                            Get Elite Access\
+                        </button>\
+                    </div>\
+                </div>\
+            </section>\
+            \
+            <!-- Get Involved Section -->\
+            <section id="get-involved" class="my-16 text-center">\
+                <h2 class="text-3xl md:text-4xl font-bold text-yellow-400 mb-12">Get Involved</h2>\
+                <div class="grid md:grid-cols-3 gap-8">\
+                    <!-- Partner & Sponsors -->\
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-xl flex flex-col justify-center items-center transform transition-transform hover:scale-105">\
+                        <svg class="w-16 h-16 text-yellow-400 mb-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 8a1 1 0 011-1h12a1 1 0 110 2H6a1 1 0 01-1-1zM5 12a1 1 0 011-1h12a1 1 0 110 2H6a1 1 0 01-1-1zM5 16a1 1 0 011-1h12a1 1 0 110 2H6a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>\
+                        <h3 class="text-2xl font-bold text-white mb-2">Partners & Sponsors</h3>\
+                        <p class="text-gray-300 mb-4">Elevate your brand and connect with 3000+ legacy-driven entrepreneurs.</p>\
+                        <button class="bg-yellow-400 text-black font-bold py-3 px-6 rounded-full hover:bg-yellow-500 transition-colors" onclick="showModal('sponsorship')">Request Info</button>\
+                    </div>\
+                    <!-- Vendors -->\
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-xl flex flex-col justify-center items-center transform transition-transform hover:scale-105">\
+                        <svg class="w-16 h-16 text-yellow-400 mb-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM6.5 10a.5.5 0 01.5-.5h6a.5.5 0 010 1H7a.5.5 0 01-.5-.5z"></path></svg>\
+                        <h3 class="text-2xl font-bold text-white mb-2">Vendors</h3>\
+                        <p class="text-gray-300 mb-4">Showcase your products and services at our Wealth & Wellness Expo.</p>\
+                        <button class="bg-yellow-400 text-black font-bold py-3 px-6 rounded-full hover:bg-yellow-500 transition-colors" onclick="showModal('vendor')">Reserve Booth</button>\
+                    </div>\
+                    <!-- Volunteers -->\
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-xl flex flex-col justify-center items-center transform transition-transform hover:scale-105">\
+                        <svg class="w-16 h-16 text-yellow-400 mb-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>\
+                        <h3 class="text-2xl font-bold text-white mb-2">Volunteers</h3>\
+                        <p class="text-gray-300 mb-4">Join our community impact team and help create a transformative experience.</p>\
+                        <button class="bg-yellow-400 text-black font-bold py-3 px-6 rounded-full hover:bg-yellow-500 transition-colors" onclick="showModal('volunteer')">Join Our Team</button>\
+                    </div>\
+                </div>\
+            </section>\
+        </main>\
+\
+        <!-- Footer -->\
+        <footer class="bg-gray-900 p-8 text-center text-gray-400">\
+            <div class="container mx-auto">\
+                <p>&copy; 2025 Millionaire Wealth Mindset Conference. All rights reserved.</p>\
+                <p>Presented by We Paying It Forward 501c3</p>\
+                <div class="mt-4 flex justify-center space-x-6">\
+                    <a href="mailto:info@millionairewealthmindset.com" class="text-yellow-400 hover:text-white">info@millionairewealthmindset.com</a>\
+                    <a href="tel:7025551234" class="text-yellow-400 hover:text-white">(702) 555-1234</a>\
+                    <a href="https://www.millionairewealthmindset.com" target="_blank" class="text-yellow-400 hover:text-white">Website</a>\
+                </div>\
+            </div>\
+        </footer>\
+\
+        <!-- Modal -->\
+        <div id="modal-container" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4">\
+            <div class="bg-gray-900 text-gray-200 rounded-lg p-8 max-w-2xl w-full relative">\
+                <button id="close-modal" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">\
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>\
+                </button>\
+                <div id="modal-content">\
+                    <!-- Dynamic content will be injected here -->\
+                </div>\
+            </div>\
+        </div>\
+    </div>\
+    \
+    <script type="module">\
+        import \{ initializeApp, setLogLevel \} from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";\
+        import \{ getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged \} from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";\
+        import \{ getFirestore, collection, addDoc, serverTimestamp \} from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";\
+\
+        // Firebase Configuration and Initialization\
+        let db;\
+        let auth;\
+        let appId;\
+        let userId;\
+\
+        // Use the global variables provided by the environment\
+        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : null;\
+        const initialAuthToken = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;\
+        const currentAppId = typeof __app_id !== 'undefined' ? __app_id : 'default-app-id';\
+\
+        if (firebaseConfig) \{\
+            const app = initializeApp(firebaseConfig);\
+            setLogLevel('debug'); // For development logging\
+            db = getFirestore(app);\
+            auth = getAuth(app);\
+            appId = currentAppId;\
+\
+            onAuthStateChanged(auth, async (user) => \{\
+                if (user) \{\
+                    userId = user.uid;\
+                \} else if (initialAuthToken) \{\
+                    await signInWithCustomToken(auth, initialAuthToken).catch(error => \{\
+                        console.error("Error signing in with custom token:", error);\
+                        signInAnonymously(auth);\
+                    \});\
+                \} else \{\
+                    await signInAnonymously(auth).catch(error => \{\
+                        console.error("Error signing in anonymously:", error);\
+                    \});\
+                \}\
+            \});\
+        \}\
+\
+        // Smooth scrolling for navigation links\
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => \{\
+            anchor.addEventListener('click', function (e) \{\
+                e.preventDefault();\
+                document.querySelector(this.getAttribute('href')).scrollIntoView(\{\
+                    behavior: 'smooth'\
+                \});\
+                // Close mobile menu after clicking a link\
+                const mobileMenu = document.getElementById('mobile-menu');\
+                if (!mobileMenu.classList.contains('hidden')) \{\
+                    mobileMenu.classList.add('hidden');\
+                \}\
+            \});\
+        \});\
+\
+        // Mobile menu toggle\
+        document.getElementById('mobile-menu-button').addEventListener('click', function() \{\
+            document.getElementById('mobile-menu').classList.toggle('hidden');\
+        \});\
+\
+        // Modal functionality\
+        const modalContainer = document.getElementById('modal-container');\
+        const modalContent = document.getElementById('modal-content');\
+        const closeModalButton = document.getElementById('close-modal');\
+\
+        function showModal(type) \{\
+            let title = '';\
+            let formContent = '';\
+            let collectionName = '';\
+            \
+            if (type === 'sponsorship') \{\
+                title = 'Partnership & Sponsorship Opportunities';\
+                collectionName = 'sponsors';\
+                formContent = `\
+                    <p class="text-gray-300 mb-4">Become a partner and align your brand with 3000+ driven entrepreneurs. Choose a package that fits your goals:</p>\
+                    <ul class="list-disc list-inside space-y-2 text-gray-300 mb-6">\
+                        <li><b>Legacy Sponsor:</b> $50,000</li>\
+                        <li><b>Millionaire Sponsor:</b> $25,000</li>\
+                        <li><b>Wealth Builder Sponsor:</b> $10,000</li>\
+                    </ul>\
+                `;\
+            \} else if (type === 'vendor') \{\
+                title = 'Become a Vendor';\
+                collectionName = 'vendors';\
+                formContent = `\
+                    <p class="text-gray-300 mb-4">Showcase your products and services directly to our high-value audience. Select your booth space:</p>\
+                    <ul class="list-disc list-inside space-y-2 text-gray-300 mb-6">\
+                        <li><b>Standard Impact Hub:</b> $350</li>\
+                        <li><b>Premium Visibility Zone:</b> $500</li>\
+                        <li><b>Double Your Dominance:</b> $650</li>\
+                    </ul>\
+                `;\
+            \} else if (type === 'volunteer') \{\
+                title = 'Join Our Volunteer Team';\
+                collectionName = 'volunteers';\
+                formContent = `\
+                    <p class="text-gray-300 mb-4">Be part of the movement and gain valuable experience while connecting with visionaries. Benefits include free event access and exclusive networking.</p>\
+                `;\
+            \}\
+            \
+            modalContent.innerHTML = `\
+                <h3 class="text-3xl font-bold text-yellow-400 mb-4">$\{title\}</h3>\
+                $\{formContent\}\
+                <form id="submission-form" class="space-y-4">\
+                    <input type="hidden" name="type" value="$\{type\}">\
+                    <div>\
+                        <label for="name" class="block text-left text-sm font-medium text-gray-400">Name</label>\
+                        <input type="text" id="name" name="name" class="w-full p-2 bg-gray-800 rounded-md border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400" required>\
+                    </div>\
+                    <div>\
+                        <label for="email" class="block text-left text-sm font-medium text-gray-400">Email</label>\
+                        <input type="email" id="email" name="email" class="w-full p-2 bg-gray-800 rounded-md border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400" required>\
+                    </div>\
+                    <div>\
+                        <label for="message" class="block text-left text-sm font-medium text-gray-400">Message</label>\
+                        <textarea id="message" name="message" rows="4" class="w-full p-2 bg-gray-800 rounded-md border border-gray-700 focus:outline-none focus:ring-2 focus:ring-yellow-400" required></textarea>\
+                    </div>\
+                    <button type="submit" class="w-full bg-yellow-400 text-black font-bold py-3 rounded-full hover:bg-yellow-500 transition-colors">\
+                        Submit\
+                    </button>\
+                    <div id="form-status" class="mt-4 text-center"></div>\
+                </form>\
+            `;\
+            \
+            modalContainer.classList.remove('hidden');\
+\
+            document.getElementById('submission-form').addEventListener('submit', (e) => handleSubmitForm(collectionName, e));\
+        \}\
+\
+        async function handleSubmitForm(collectionName, event) \{\
+            event.preventDefault();\
+            const form = event.target;\
+            const statusDiv = document.getElementById('form-status');\
+            const submitButton = form.querySelector('button[type="submit"]');\
+\
+            if (!db || !userId) \{\
+                statusDiv.textContent = 'Backend not connected. Please try again later.';\
+                statusDiv.classList.add('text-red-500');\
+                console.error("Firestore or user not initialized.");\
+                return;\
+            \}\
+\
+            submitButton.disabled = true;\
+            submitButton.textContent = 'Submitting...';\
+            statusDiv.textContent = '';\
+\
+            const formData = new FormData(form);\
+            const data = \{\
+                name: formData.get('name'),\
+                email: formData.get('email'),\
+                message: formData.get('message'),\
+                timestamp: serverTimestamp(),\
+                userId: userId\
+            \};\
+            \
+            // Define the collection path based on the public security rules\
+            const collectionPath = `artifacts/$\{appId\}/public/data/$\{collectionName\}`;\
+\
+            try \{\
+                await addDoc(collection(db, collectionPath), data);\
+                statusDiv.textContent = 'Submission successful! We will be in touch shortly.';\
+                statusDiv.classList.remove('text-red-500');\
+                statusDiv.classList.add('text-green-500');\
+                form.reset();\
+                setTimeout(() => \{\
+                    modalContainer.classList.add('hidden');\
+                \}, 3000);\
+            \} catch (error) \{\
+                console.error("Error writing document: ", error);\
+                statusDiv.textContent = 'Error submitting form. Please try again.';\
+                statusDiv.classList.remove('text-green-500');\
+                statusDiv.classList.add('text-red-500');\
+            \} finally \{\
+                submitButton.disabled = false;\
+                submitButton.textContent = 'Submit';\
+            \}\
+        \}\
+\
+\
+        closeModalButton.addEventListener('click', () => \{\
+            modalContainer.classList.add('hidden');\
+        \});\
+\
+        // Close modal if user clicks outside of it\
+        modalContainer.addEventListener('click', (e) => \{\
+            if (e.target === modalContainer) \{\
+                modalContainer.classList.add('hidden');\
+            \}\
+        \});\
+    </script>\
+</body>\
+</html>\
+}
