@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bet On You - Interactive Widget | Millionaire Wealth Mindset Conference</title>
+    <meta name="description" content="Interactive 'Bet On You' experience. Discover your wealth mindset potential and take the first step toward financial transformation.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #f5f5f5;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .chip-glow {
+            animation: chip-glow 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.5));
+        }
+        
+        @keyframes chip-glow {
+            0%, 100% { 
+                transform: scale(1) rotate(0deg);
+                filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.5));
+            }
+            50% { 
+                transform: scale(1.05) rotate(5deg);
+                filter: drop-shadow(0 0 30px rgba(251, 191, 36, 0.8));
+            }
+        }
+        
+        .widget-container {
+            background: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, rgba(245, 158, 11, 0.1) 50%, rgba(217, 119, 6, 0.1) 100%);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+        }
+        
+        .progress-bar {
+            transition: width 0.8s ease-out;
+        }
+        
+        .card-flip {
+            perspective: 1000px;
+        }
+        
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        
+        .card-flip.flipped .card-inner {
+            transform: rotateY(180deg);
+        }
+        
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .card-front {
+            background: linear-gradient(135deg, #1f2937, #374151);
+            border: 2px solid rgba(251, 191, 36, 0.3);
+        }
+        
+        .card-back {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: #000;
+            transform: rotateY(180deg);
+        }
+        
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        
+        .floating-chip {
+            position: absolute;
+            animation: float-random 8s ease-in-out infinite;
+            opacity: 0.3;
+        }
+        
+        @keyframes float-random {
+            0%, 100% { 
+                transform: translateY(0px) translateX(0px) rotate(0deg);
+            }
+            25% { 
+                transform: translateY(-30px) translateX(20px) rotate(90deg);
+            }
+            50% { 
+                transform: translateY(-10px) translateX(-15px) rotate(180deg);
+            }
+            75% { 
+                transform: translateY(-40px) translateX(10px) rotate(270deg);
+            }
+        }
+        
+        
+        .pulse-button {
+            animation: pulse-button 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-button {
+            0%, 100% { 
+                transform: scale(1);
+                box-shadow: 0 0 20px rgba(251, 191, 36, 0.3);
+            }
+            50% { 
+                transform: scale(1.05);
+                box-shadow: 0 0 30px rgba(251, 191, 36, 0.6);
+            }
+        }
+    </style>
+</head>
+<body class="bg-black text-white antialiased overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-yellow-400/20">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <img src="./assets/MWM-logo.png" alt="MWM Logo" class="h-10 w-auto">
+                    <span class="text-xl font-bold gradient-text">MWM Conference</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="./index.html" class="text-gray-300 hover:text-yellow-400 transition-colors font-medium">Home</a>
+                    <a href="./index.html#about" class="text-gray-300 hover:text-yellow-400 transition-colors font-medium">About</a>
+                    <a href="./speakers.html" class="text-gray-300 hover:text-yellow-400 transition-colors font-medium">Speakers</a>
+                    <a href="./tickets.html" class="text-gray-300 hover:text-yellow-400 transition-colors font-medium">Tickets</a>
+                    <a href="./sponsors.html" class="text-gray-300 hover:text-yellow-400 transition-colors font-medium">Partners</a>
+                    <a href="./contact.html" class="text-gray-300 hover:text-yellow-400 transition-colors font-medium">Contact</a>
+                    <a href="./bet-on-you.html" class="ml-4 p-2 bg-yellow-400/30 rounded-full hover:bg-yellow-400/40 transition-colors" title="Create Your Bet On You Chip">
+                        <img src="./assets/bet-on-mwm-symbol-chip.png" alt="Bet On You" class="w-8 h-8">
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4">
+                <a href="./index.html" class="block text-gray-300 hover:text-yellow-400 transition-colors">Home</a>
+                <a href="./index.html#about" class="block text-gray-300 hover:text-yellow-400 transition-colors">About</a>
+                <a href="./speakers.html" class="block text-gray-300 hover:text-yellow-400 transition-colors">Speakers</a>
+                <a href="./tickets.html" class="block text-gray-300 hover:text-yellow-400 transition-colors">Tickets</a>
+                <a href="./sponsors.html" class="block text-gray-300 hover:text-yellow-400 transition-colors">Partners</a>
+                <a href="./contact.html" class="block text-gray-300 hover:text-yellow-400 transition-colors">Contact</a>
+                <a href="./bet-on-you.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300 transition-colors font-medium">
+                    <img src="./assets/bet-on-mwm-symbol-chip.png" alt="Bet On You" class="w-6 h-6">
+                    <span>Create Your Chip</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Floating Background Elements -->
+    <div class="floating-elements">
+        <div class="floating-chip" style="top: 10%; left: 10%; animation-delay: 0s;">
+            <img src="./assets/bet-on-mwm-symbol-chip.png" alt="Chip" class="w-12 h-12">
+        </div>
+        <div class="floating-chip" style="top: 20%; right: 15%; animation-delay: 2s;">
+            <img src="./assets/bet-on-mwm-main-chip.png" alt="Chip" class="w-16 h-16">
+        </div>
+        <div class="floating-chip" style="bottom: 30%; left: 20%; animation-delay: 4s;">
+            <img src="./assets/bet-on-mwm-symbol-chip.png" alt="Chip" class="w-10 h-10">
+        </div>
+        <div class="floating-chip" style="bottom: 15%; right: 25%; animation-delay: 6s;">
+            <img src="./assets/bet-on-mwm-main-chip.png" alt="Chip" class="w-14 h-14">
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center relative pt-20">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto">
+                <!-- Main Chip -->
+                <div class="mb-12">
+                    <img src="./assets/bet-on-mwm-main-chip.png" alt="Bet On You Chip" class="w-48 h-48 mx-auto chip-glow">
+                </div>
+                
+                <!-- Main Title -->
+                <h1 class="text-5xl md:text-7xl font-bold mb-8 gradient-text leading-tight">
+                    It's Time to Bet On You
+                </h1>
+                
+                <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+                    Take the leap. Make the investment. Transform your mindset. 
+                    <span class="text-yellow-400 font-semibold">Your future self is waiting.</span>
+                </p>
+                
+                <!-- Interactive Chip Creator Widget -->
+                <div class="widget-container rounded-2xl p-8 max-w-4xl mx-auto mb-12">
+                    <h2 class="text-3xl font-bold text-yellow-400 mb-6 text-center">Create Your Personal "Bet On You" Chip</h2>
+                    <p class="text-gray-300 text-center mb-8">Upload your photo and name to create a personalized Vegas-style chip that represents your commitment to transformation.</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <!-- Upload Section -->
+                        <div class="space-y-6">
+                            <div>
+                                <label for="userName" class="block text-white font-medium mb-3">Your Name *</label>
+                                <input type="text" id="userName" placeholder="Enter your name" class="w-full p-4 bg-gray-900 border border-gray-600 rounded-lg text-white focus:border-yellow-400 focus:outline-none transition-colors text-lg">
+                            </div>
+                            
+                            <div>
+                                <label for="photoUpload" class="block text-white font-medium mb-3">Upload Your Photo *</label>
+                                <div class="relative">
+                                    <input type="file" id="photoUpload" accept="image/*" class="hidden">
+                                    <label for="photoUpload" class="flex items-center justify-center w-full p-6 bg-gray-900 border-2 border-dashed border-gray-600 rounded-lg hover:border-yellow-400 transition-colors cursor-pointer">
+                                        <div class="text-center">
+                                            <svg class="w-12 h-12 text-yellow-400 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/>
+                                            </svg>
+                                            <p class="text-gray-300 font-medium">Click to upload your photo</p>
+                                            <p class="text-gray-500 text-sm mt-1">JPG, PNG, or GIF (max 5MB)</p>
+                                        </div>
+                                    </label>
+                                </div>
+                                <p class="text-gray-400 text-sm mt-2">Selected: <span id="fileName" class="text-yellow-400">No file chosen</span></p>
+                            </div>
+                            
+                            <div class="bg-yellow-400/10 rounded-lg p-4 border border-yellow-400/30">
+                                <h4 class="text-yellow-400 font-semibold mb-2">💡 Photo Tips:</h4>
+                                <ul class="text-gray-300 text-sm space-y-1">
+                                    <li>• Use a clear, high-quality headshot</li>
+                                    <li>• Make sure your face is well-lit</li>
+                                    <li>• Square photos work best</li>
+                                    <li>• Professional or confident expression</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Canvas Preview Section -->
+                        <div class="text-center">
+                            <div class="canvas-container relative bg-gray-900 rounded-2xl p-8 border border-gray-700">
+                                <canvas id="chipCanvas" class="max-w-full h-auto rounded-xl shadow-2xl"></canvas>
+                                <div class="instruction absolute inset-0 flex items-center justify-center">
+                                    <div class="text-center">
+                                        <div class="w-24 h-24 mx-auto mb-4 bg-yellow-400/20 rounded-full flex items-center justify-center">
+                                            <svg class="w-12 h-12 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                            </svg>
+                                        </div>
+                                        <p class="text-gray-400 text-lg">Your custom chip will appear here</p>
+                                        <p class="text-gray-500 text-sm">Add your name and photo to get started</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button id="downloadChip" disabled class="mt-6 px-8 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold rounded-full hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none">
+                                DOWNLOAD MY CHIP
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Cards Section -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">Choose Your Bet</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Click each card to reveal what you're really betting on when you invest in yourself.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Card 1: Mindset -->
+                <div class="card-flip" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="p-6">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-yellow-400/20 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-4">Your Mindset</h3>
+                                <p class="text-gray-400">Click to see what you're really betting on</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold mb-4">Unlimited Potential</h3>
+                                <p class="text-lg">You're betting on your ability to think bigger, dream larger, and achieve what others say is impossible.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Future -->
+                <div class="card-flip" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="p-6">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-yellow-400/20 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zM15 11h-2V7h-2v4H9l3 3 3-3z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-4">Your Future</h3>
+                                <p class="text-gray-400">Click to see what you're really betting on</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold mb-4">Generational Impact</h3>
+                                <p class="text-lg">You're betting on a future where your success creates opportunities for generations to come.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Legacy -->
+                <div class="card-flip" onclick="flipCard(this)">
+                    <div class="card-inner">
+                        <div class="card-front">
+                            <div class="p-6">
+                                <div class="w-16 h-16 mx-auto mb-4 bg-yellow-400/20 rounded-full flex items-center justify-center">
+                                    <svg class="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                    </svg>
+                                </div>
+                                <h3 class="text-2xl font-bold text-white mb-4">Your Legacy</h3>
+                                <p class="text-gray-400">Click to see what you're really betting on</p>
+                            </div>
+                        </div>
+                        <div class="card-back">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-bold mb-4">Lasting Change</h3>
+                                <p class="text-lg">You're betting on creating something bigger than yourself - a legacy that transforms communities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Commitment Calculator -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">Calculate Your Commitment</h2>
+                    <p class="text-xl text-gray-300">
+                        See how your investment in the conference compares to your daily spending habits.
+                    </p>
+                </div>
+
+                <div class="widget-container rounded-2xl p-8">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-6">Your Daily Habits</h3>
+                            <div class="space-y-4">
+                                <div>
+                                    <label class="block text-yellow-400 font-medium mb-2">Daily Coffee ☕</label>
+                                    <input type="number" id="coffee" placeholder="5" class="w-full p-3 bg-gray-800 border border-gray-600 rounded-lg text-white" min="0" max="50">
+                                </div>
+                                <div>
+                                    <label class="block text-yellow-400 font-medium mb-2">Lunch Out 🍽️</label>
+                                    <input type="number" id="lunch" placeholder="15" class="w-full p-3 bg-gray-800 border border-gray-600 rounded-lg text-white" min="0" max="100">
+                                </div>
+                                <div>
+                                    <label class="block text-yellow-400 font-medium mb-2">Entertainment 🎬</label>
+                                    <input type="number" id="entertainment" placeholder="20" class="w-full p-3 bg-gray-800 border border-gray-600 rounded-lg text-white" min="0" max="200">
+                                </div>
+                                <button onclick="calculateCommitment()" class="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 rounded-full transition-colors">
+                                    CALCULATE MY INVESTMENT
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-6">Your Investment Perspective</h3>
+                            <div id="calculation-results" class="space-y-4 text-gray-300">
+                                <p class="text-center text-gray-500 italic">Enter your daily spending to see the comparison...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Motivational Quotes Carousel -->
+    <section class="py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-12 gradient-text">Words of Wisdom</h2>
+                
+                <div id="quotes-carousel" class="relative">
+                    <div class="quote-slide active bg-gray-800/50 rounded-2xl p-8 border border-yellow-400/30">
+                        <blockquote class="text-2xl md:text-3xl text-white mb-6 italic">
+                            "When you bet on yourself, you're not gambling – you're investing in your God-given potential."
+                        </blockquote>
+                        <cite class="text-yellow-400 font-semibold text-lg">— Marquetta DeVille</cite>
+                    </div>
+                    
+                    <div class="quote-slide bg-gray-800/50 rounded-2xl p-8 border border-yellow-400/30 hidden">
+                        <blockquote class="text-2xl md:text-3xl text-white mb-6 italic">
+                            "True wealth isn't just about what you accumulate, but what you contribute to the world."
+                        </blockquote>
+                        <cite class="text-yellow-400 font-semibold text-lg">— King Jermaine Jones</cite>
+                    </div>
+                    
+                    <div class="quote-slide bg-gray-800/50 rounded-2xl p-8 border border-yellow-400/30 hidden">
+                        <blockquote class="text-2xl md:text-3xl text-white mb-6 italic">
+                            "Every business has a powerful story waiting to be told – I help them tell it."
+                        </blockquote>
+                        <cite class="text-yellow-400 font-semibold text-lg">— Shaundell Newsome</cite>
+                    </div>
+                </div>
+                
+                <!-- Carousel Controls -->
+                <div class="flex justify-center space-x-2 mt-8">
+                    <button onclick="showQuote(0)" class="quote-dot w-3 h-3 rounded-full bg-yellow-400"></button>
+                    <button onclick="showQuote(1)" class="quote-dot w-3 h-3 rounded-full bg-gray-600"></button>
+                    <button onclick="showQuote(2)" class="quote-dot w-3 h-3 rounded-full bg-gray-600"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 bg-black">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-4xl mx-auto">
+                <img src="./assets/bet-on-marquetta-king-chip-and-mwm.png" alt="Bet On MWM" class="w-64 h-64 mx-auto mb-8 chip-glow">
+                
+                <h2 class="text-4xl md:text-6xl font-bold mb-6 gradient-text">The Bet Is On</h2>
+                <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
+                    You've explored the possibilities. You've seen the vision. 
+                    <span class="text-yellow-400 font-semibold">Now it's time to make the bet that changes everything.</span>
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <a href="https://posh.vip/e/millionaire-wealth-mindset" target="_blank" class="pulse-button inline-block px-12 py-6 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold text-2xl rounded-full shadow-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300">
+                        BET ON YOURSELF NOW
+                    </a>
+                    <a href="./index.html" class="inline-block px-12 py-6 border-2 border-yellow-400 text-yellow-400 font-bold text-2xl rounded-full hover:bg-yellow-400 hover:text-black transition-all duration-300">
+                        LEARN MORE FIRST
+                    </a>
+                </div>
+                
+                <p class="text-gray-400 mt-8 text-lg">
+                    November 16, 2025 • Cox Pavilion, Las Vegas • Your transformation awaits
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 py-12">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <div class="flex items-center justify-center space-x-3 mb-4">
+                    <img src="./assets/MWM-logo.png" alt="MWM Logo" class="h-8 w-auto">
+                    <span class="text-lg font-bold gradient-text">Millionaire Wealth Mindset Conference</span>
+                </div>
+                <p class="text-gray-400 mb-4">It's time to bet on you.</p>
+                <div class="flex justify-center space-x-6 text-gray-400">
+                    <a href="./index.html" class="hover:text-yellow-400 transition-colors">Home</a>
+                    <a href="./speakers.html" class="hover:text-yellow-400 transition-colors">Speakers</a>
+                    <a href="./tickets.html" class="hover:text-yellow-400 transition-colors">Tickets</a>
+                    <a href="./contact.html" class="hover:text-yellow-400 transition-colors">Contact</a>
+                </div>
+                <p class="text-gray-500 text-sm mt-6">&copy; 2025 Millionaire Wealth Mindset Conference. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./bet-on-you-widget.js"></script>
+    <script>
+        // Widget State
+        let userGoal = '';
+        let userCommitment = '';
+        let currentStep = 1;
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu) menu.classList.toggle('hidden');
+        });
+
+        // Widget Functions
+        function selectGoal(goal) {
+            userGoal = goal;
+            currentStep = 2;
+            updateProgress();
+            
+            // Hide step 1, show step 2
+            document.getElementById('step-1').classList.add('hidden');
+            document.getElementById('step-2').classList.remove('hidden');
+        }
+
+        function selectCommitment(commitment) {
+            userCommitment = commitment;
+            currentStep = 3;
+            updateProgress();
+            showResults();
+        }
+
+        function updateProgress() {
+            const progressBar = document.getElementById('progress-bar');
+            const progressText = document.getElementById('progress-text');
+            const percentage = (currentStep - 1) * 50;
+            
+            progressBar.style.width = percentage + '%';
+            progressText.textContent = percentage + '% Complete';
+        }
+
+        function showResults() {
+            document.getElementById('step-2').classList.add('hidden');
+            document.getElementById('step-3').classList.remove('hidden');
+            
+            const resultsContent = document.getElementById('results-content');
+            
+            const goalMessages = {
+                'financial-freedom': 'Financial Freedom',
+                'business-growth': 'Business Growth', 
+                'legacy-building': 'Legacy Building',
+                'mindset-shift': 'Mindset Transformation'
+            };
+            
+            const commitmentMessages = {
+                'all-in': {
+                    level: 'ALL IN',
+                    message: 'You\'re ready for complete transformation!',
+                    recommendation: 'Millionaire Circle',
+                    price: '$1,111',
+                    color: 'text-green-400'
+                },
+                'serious': {
+                    level: 'SERIOUS',
+                    message: 'You\'re committed to significant change!',
+                    recommendation: 'VIP Experience', 
+                    price: '$555',
+                    color: 'text-yellow-400'
+                },
+                'exploring': {
+                    level: 'EXPLORING',
+                    message: 'You\'re open to new possibilities!',
+                    recommendation: 'General Admission',
+                    price: '$197', 
+                    color: 'text-blue-400'
+                }
+            };
+            
+            const commitment = commitmentMessages[userCommitment];
+            const goal = goalMessages[userGoal];
+            
+            resultsContent.innerHTML = `
+                <div class="text-center">
+                    <div class="w-24 h-24 mx-auto mb-6 bg-yellow-400/20 rounded-full flex items-center justify-center">
+                        <svg class="w-12 h-12 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    
+                    <h3 class="text-3xl font-bold text-white mb-4">Your Bet Profile</h3>
+                    
+                    <div class="bg-gray-800/50 rounded-xl p-6 mb-6 border border-yellow-400/30">
+                        <div class="grid md:grid-cols-2 gap-6 text-left">
+                            <div>
+                                <h4 class="text-yellow-400 font-semibold mb-2">Your Goal:</h4>
+                                <p class="text-white text-lg">${goal}</p>
+                            </div>
+                            <div>
+                                <h4 class="text-yellow-400 font-semibold mb-2">Your Commitment:</h4>
+                                <p class="${commitment.color} text-lg font-semibold">${commitment.level}</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-r from-yellow-400/10 to-orange-500/10 rounded-xl p-6 mb-8 border border-yellow-400/50">
+                        <h4 class="text-2xl font-bold text-yellow-400 mb-4">Perfect Match: ${commitment.recommendation}</h4>
+                        <p class="text-white text-lg mb-4">${commitment.message}</p>
+                        <div class="text-3xl font-bold text-yellow-400 mb-4">${commitment.price}</div>
+                        <p class="text-gray-300">This package aligns with your commitment level and goals.</p>
+                    </div>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="https://posh.vip/e/millionaire-wealth-mindset" target="_blank" class="pulse-button inline-block px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold text-lg rounded-full transition-all duration-300">
+                            GET MY RECOMMENDED TICKET
+                        </a>
+                        <button onclick="resetWidget()" class="inline-block px-8 py-4 border-2 border-yellow-400 text-yellow-400 font-bold text-lg rounded-full hover:bg-yellow-400 hover:text-black transition-all duration-300">
+                            START OVER
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            updateProgress();
+            document.getElementById('progress-text').textContent = '100% Complete';
+            document.getElementById('progress-bar').style.width = '100%';
+        }
+
+        function resetWidget() {
+            userGoal = '';
+            userCommitment = '';
+            currentStep = 1;
+            
+            document.getElementById('step-1').classList.remove('hidden');
+            document.getElementById('step-2').classList.add('hidden');
+            document.getElementById('step-3').classList.add('hidden');
+            
+            updateProgress();
+        }
+
+        // Commitment Calculator
+        function calculateCommitment() {
+            const coffee = parseFloat(document.getElementById('coffee').value) || 0;
+            const lunch = parseFloat(document.getElementById('lunch').value) || 0;
+            const entertainment = parseFloat(document.getElementById('entertainment').value) || 0;
+            
+            const dailyTotal = coffee + lunch + entertainment;
+            const monthlyTotal = dailyTotal * 30;
+            const yearlyTotal = dailyTotal * 365;
+            
+            const ticketPrices = {
+                general: 197,
+                vip: 555,
+                millionaire: 1111
+            };
+            
+            const results = document.getElementById('calculation-results');
+            
+            results.innerHTML = `
+                <div class="space-y-4">
+                    <div class="bg-gray-800/50 rounded-lg p-4">
+                        <h4 class="text-yellow-400 font-semibold mb-2">Your Daily Spending</h4>
+                        <p class="text-2xl font-bold text-white">$${dailyTotal.toFixed(2)}</p>
+                    </div>
+                    
+                    <div class="bg-gray-800/50 rounded-lg p-4">
+                        <h4 class="text-yellow-400 font-semibold mb-2">Monthly Total</h4>
+                        <p class="text-2xl font-bold text-white">$${monthlyTotal.toFixed(2)}</p>
+                    </div>
+                    
+                    <div class="bg-yellow-400/10 rounded-lg p-4 border border-yellow-400/30">
+                        <h4 class="text-yellow-400 font-semibold mb-2">Conference Investment Comparison</h4>
+                        <div class="space-y-2 text-sm">
+                            <p class="text-gray-300">General Admission ($197) = ${Math.ceil(ticketPrices.general / dailyTotal)} days of your current spending</p>
+                            <p class="text-gray-300">VIP Experience ($555) = ${Math.ceil(ticketPrices.vip / dailyTotal)} days of your current spending</p>
+                            <p class="text-gray-300">Millionaire Circle ($1,111) = ${Math.ceil(ticketPrices.millionaire / dailyTotal)} days of your current spending</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-green-500/10 rounded-lg p-4 border border-green-500/30">
+                        <h4 class="text-green-400 font-semibold mb-2">💡 Perspective</h4>
+                        <p class="text-white">You spend $${yearlyTotal.toFixed(2)} yearly on daily habits. Investing in your wealth mindset could transform how you earn and multiply that amount!</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Card Flip Function
+        function flipCard(card) {
+            card.classList.toggle('flipped');
+        }
+
+        // Quotes Carousel
+        let currentQuote = 0;
+        const quotes = document.querySelectorAll('.quote-slide');
+        const dots = document.querySelectorAll('.quote-dot');
+
+        function showQuote(index) {
+            quotes.forEach((quote, i) => {
+                quote.classList.toggle('hidden', i !== index);
+            });
+            
+            dots.forEach((dot, i) => {
+                dot.classList.toggle('bg-yellow-400', i === index);
+                dot.classList.toggle('bg-gray-600', i !== index);
+            });
+            
+            currentQuote = index;
+        }
+
+        // Auto-advance quotes every 5 seconds
+        setInterval(() => {
+            currentQuote = (currentQuote + 1) % quotes.length;
+            showQuote(currentQuote);
+        }, 5000);
+
+    </script>
+</body>
+</html>

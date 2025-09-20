@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speakers - Millionaire Wealth Mindset Conference 2025</title>
+    <meta name="description" content="Meet our powerful lineup of speakers at the Millionaire Wealth Mindset Conference. Industry leaders, entrepreneurs, and wealth-building experts.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #f5f5f5;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(251, 191, 36, 0.25);
+        }
+        
+        .section-fade {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        
+        .section-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .speaker-modal {
+            backdrop-filter: blur(10px);
+        }
+    </style>
+</head>
+<body class="bg-black text-white antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-yellow-400/20">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <img src="./assets/MWM-logo.png" alt="MWM Logo" class="h-10 w-auto">
+                    <span class="text-xl font-bold gradient-text">MWM Conference</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="./index.html" class="text-gray-300 hover:text-yellow-400 transition-colors font-medium">Home</a>
+                    <a href="./index.html#about" class="text-gray-300 hover:text-yellow-400 transition-colors font-medium">About</a>
+                    <a href="./speakers.html" class="text-yellow-400 font-medium">Speakers</a>
+                    <a href="./tickets.html" class="text-gray-300 hover:text-yellow-400 transition-colors font-medium">Tickets</a>
+                    <a href="./sponsors.html" class="text-gray-300 hover:text-yellow-400 transition-colors font-medium">Partners</a>
+                    <a href="./contact.html" class="text-gray-300 hover:text-yellow-400 transition-colors font-medium">Contact</a>
+                    <a href="./bet-on-you.html" class="ml-4 p-2 bg-yellow-400/20 rounded-full hover:bg-yellow-400/30 transition-colors" title="Create Your Bet On You Chip">
+                        <img src="./assets/bet-on-mwm-symbol-chip.png" alt="Bet On You" class="w-8 h-8">
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-b from-black via-gray-900 to-black">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 gradient-text">Meet Your Speakers</h1>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                Learn from industry titans, successful entrepreneurs, and wealth-building experts who have transformed their lives and are ready to transform yours.
+            </p>
+            <div class="flex items-center justify-center space-x-4 text-gray-400">
+                <span>10+ Expert Speakers</span>
+                <span>•</span>
+                <span>Decades of Combined Experience</span>
+                <span>•</span>
+                <span>Proven Success Stories</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founders Section -->
+    <section class="section-fade py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">Conference Founders</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Meet the visionary leaders behind the Millionaire Wealth Mindset Conference.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Marquetta DeVille -->
+                <div class="card-hover bg-gray-800/50 rounded-2xl overflow-hidden border border-gray-700 hover:border-yellow-400/50">
+                    <div class="aspect-[4/5] overflow-hidden">
+                            <img src="./assets/marquetta-improved.jpeg" alt="Marquetta DeVille" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-3xl font-bold text-white mb-2">Marquetta DeVille</h3>
+                        <p class="text-yellow-400 text-lg font-medium mb-4">International Speaker, Author, Educator, Minister</p>
+                        <p class="text-gray-300 leading-relaxed mb-6">
+                            Marquetta DeVille is on a mission to inspire others to rise above adversity and embrace possibility. Blending ministry with proven wealth mindset principles, she empowers you to "Bet On You" and build lasting generational wealth. Her transformative approach combines spiritual wisdom with practical financial strategies.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-yellow-400 text-black text-sm font-semibold px-3 py-1 rounded-full">Financial Freedom</span>
+                            <span class="bg-yellow-400 text-black text-sm font-semibold px-3 py-1 rounded-full">Legacy Building</span>
+                            <span class="bg-yellow-400 text-black text-sm font-semibold px-3 py-1 rounded-full">Wealth Transfer</span>
+                            <span class="bg-yellow-400 text-black text-sm font-semibold px-3 py-1 rounded-full">Ministry</span>
+                        </div>
+                        <button onclick="openModal('marquetta')" class="text-yellow-400 hover:text-yellow-300 font-medium flex items-center">
+                            Learn More 
+                            <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- King Jermaine Jones -->
+                <div class="card-hover bg-gray-800/50 rounded-2xl overflow-hidden border border-gray-700 hover:border-yellow-400/50">
+                    <div class="aspect-[4/5] overflow-hidden">
+                            <img src="./assets/king-photo.jpg" alt="King Jermaine Jones" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-3xl font-bold text-white mb-2">King Jermaine Jones</h3>
+                        <p class="text-yellow-400 text-lg font-medium mb-4">Entrepreneur, VC, Philanthropist</p>
+                        <p class="text-gray-300 leading-relaxed mb-6">
+                            From adversity, King Jermaine Jones emerged with purpose. His journey is the ultimate "Bet On You" story, building a successful empire against all odds. He now inspires others to cultivate generosity, resilience, and architect wealthy, purposeful lives while giving back to the community.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="bg-yellow-400 text-black text-sm font-semibold px-3 py-1 rounded-full">Wealth Building</span>
+                            <span class="bg-yellow-400 text-black text-sm font-semibold px-3 py-1 rounded-full">Business Scaling</span>
+                            <span class="bg-yellow-400 text-black text-sm font-semibold px-3 py-1 rounded-full">Mindset Mastery</span>
+                            <span class="bg-yellow-400 text-black text-sm font-semibold px-3 py-1 rounded-full">Philanthropy</span>
+                        </div>
+                        <button onclick="openModal('king')" class="text-yellow-400 hover:text-yellow-300 font-medium flex items-center">
+                            Learn More 
+                            <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Speaker Spotlight -->
+    <section class="section-fade py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">Featured Speaker</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Meet our spotlight speaker bringing marketing expertise and entrepreneurial wisdom to the conference.
+                </p>
+            </div>
+
+            <!-- Shaundell Hero Spotlight -->
+            <div class="max-w-6xl mx-auto mb-20">
+                <div class="card-hover bg-gray-800/50 rounded-2xl overflow-hidden border border-gray-700 hover:border-yellow-400/50">
+                    <div class="grid md:grid-cols-3 gap-0">
+                        <!-- Wide Image Section -->
+                        <div class="md:col-span-2 h-80 md:h-96 bg-cover bg-center bg-no-repeat hover:scale-105 transition-transform duration-500" style="background-image: url('./assets/shaundell-newsome-speaking.jpg');">
+                        </div>
+                        <!-- Content Section -->
+                        <div class="md:col-span-1 p-8 flex flex-col justify-center">
+                            <h3 class="text-3xl md:text-4xl font-bold text-white mb-3">Shaundell Newsome</h3>
+                            <p class="text-yellow-400 text-xl font-medium mb-4">Award-Winning Founder, Marketing Superhero</p>
+                            <p class="text-gray-300 leading-relaxed mb-6">
+                                Shaundell Newsome is the award-winning founder of SUMNU Marketing and Sumnu Solutions Zone (SSZ). Known as a "Marketing Superhero," he champions marketing strategies and entrepreneurial mentorship for small businesses, helping companies craft powerful brand stories and achieve measurable results.
+                            </p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="bg-yellow-400 text-black text-sm font-semibold px-3 py-1 rounded-full">Marketing Strategy</span>
+                                <span class="bg-yellow-400 text-black text-sm font-semibold px-3 py-1 rounded-full">Brand Building</span>
+                                <span class="bg-yellow-400 text-black text-sm font-semibold px-3 py-1 rounded-full">Business Mentorship</span>
+                            </div>
+                            <button onclick="openModal('shaundell')" class="inline-flex items-center text-yellow-400 hover:text-yellow-300 font-medium text-lg">
+                                Learn More About Shaundell
+                                <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Speakers Section -->
+    <section class="section-fade py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">Additional Expert Speakers</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Industry leaders and successful entrepreneurs sharing their specialized expertise and success stories.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+
+                <!-- Dr. Melvin King & Tiffany Ward -->
+                <div class="card-hover bg-gray-800/50 rounded-2xl overflow-hidden border border-gray-700 hover:border-yellow-400/50">
+                    <div class="aspect-square overflow-hidden">
+                            <img src="./assets/tiffany-ward-and-dr-melvin-king-of-inspire-works-hr(1).jpeg" alt="Dr. Melvin King & Tiffany Ward" class="w-full h-full object-contain hover:scale-105 transition-transform duration-500 bg-gray-700">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Dr. Melvin King & Tiffany Ward</h3>
+                        <p class="text-yellow-400 text-lg font-medium mb-3">InspireWorks HR Leadership Team</p>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                            Tiffany Ward (Founder) and Dr. Melvin King (Senior HR Strategist) lead InspireWorks HR, providing specialist HR services to small businesses and entrepreneurs in tourism and hospitality sectors, partnering with TBI to strengthen workforce development.
+                        </p>
+                        <div class="flex flex-wrap gap-1 mb-4">
+                            <span class="bg-yellow-400/20 text-yellow-400 text-xs font-medium px-2 py-1 rounded">HR Consulting</span>
+                            <span class="bg-yellow-400/20 text-yellow-400 text-xs font-medium px-2 py-1 rounded">Workforce Development</span>
+                        </div>
+                        <button onclick="openModal('melvin-tiffany')" class="text-yellow-400 hover:text-yellow-300 font-medium text-sm">Learn More →</button>
+                    </div>
+                </div>
+
+                <!-- Elias B. -->
+                <div class="card-hover bg-gray-800/50 rounded-2xl overflow-hidden border border-gray-700 hover:border-yellow-400/50">
+                    <div class="aspect-square overflow-hidden">
+                        <img src="./assets/elias-b-photo-kcep(1).jpeg" alt="Elias B." class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Elias Benjelloun</h3>
+                        <p class="text-yellow-400 text-lg font-medium mb-3">Tech Entrepreneur, Author, Community Advocate</p>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                            Elias Benjelloun is a tech entrepreneur and published author who became UNLV's youngest student body president. He founded Tech Start and authored "Butterflies Move Freely," earning an Honorary Doctorate for his contributions to education and civic leadership.
+                        </p>
+                        <div class="flex flex-wrap gap-1 mb-4">
+                            <span class="bg-yellow-400/20 text-yellow-400 text-xs font-medium px-2 py-1 rounded">Technology</span>
+                            <span class="bg-yellow-400/20 text-yellow-400 text-xs font-medium px-2 py-1 rounded">Community Impact</span>
+                        </div>
+                        <button onclick="openModal('elias')" class="text-yellow-400 hover:text-yellow-300 font-medium text-sm">Learn More →</button>
+                    </div>
+                </div>
+
+                <!-- Jon S. -->
+                <div class="card-hover bg-gray-800/50 rounded-2xl overflow-hidden border border-gray-700 hover:border-yellow-400/50">
+                    <div class="aspect-square overflow-hidden">
+                        <img src="./assets/jon-s(1).jpeg" alt="Jon S." class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Jon Stevenson</h3>
+                        <p class="text-yellow-400 text-lg font-medium mb-3">Tourism Business Igniter Leader</p>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-4">
+                            Jon Stevenson is a core leader within the Tourism Business Igniter (TBI), supporting entrepreneurship and tourism-based businesses in Las Vegas's Historic Westside with strategic guidance and key resource connections.
+                        </p>
+                        <div class="flex flex-wrap gap-1 mb-4">
+                            <span class="bg-yellow-400/20 text-yellow-400 text-xs font-medium px-2 py-1 rounded">Tourism Business</span>
+                            <span class="bg-yellow-400/20 text-yellow-400 text-xs font-medium px-2 py-1 rounded">Strategic Guidance</span>
+                        </div>
+                        <button onclick="openModal('jon')" class="text-yellow-400 hover:text-yellow-300 font-medium text-sm">Learn More →</button>
+                    </div>
+                </div>
+
+                <!-- More Speakers Coming Soon -->
+                <div class="card-hover bg-gradient-to-br from-gray-800/30 to-yellow-400/10 rounded-2xl border-2 border-dashed border-yellow-400/50 flex items-center justify-center p-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-yellow-400/20 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-yellow-400 mb-2">More Speakers</h3>
+                        <p class="text-gray-400 text-sm">Additional industry leaders being announced soon!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section-fade py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">Ready to Learn from the Best?</h2>
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
+                Don't miss your chance to learn directly from these incredible speakers and transform your wealth mindset forever.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="./tickets.html" class="inline-block px-12 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold text-xl rounded-full shadow-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105">
+                    GET YOUR TICKETS NOW
+                </a>
+                <a href="./contact.html" class="inline-block px-12 py-4 border-2 border-yellow-400 text-yellow-400 font-bold text-xl rounded-full hover:bg-yellow-400 hover:text-black transition-all duration-300">
+                    HAVE QUESTIONS?
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speaker Modal -->
+    <div id="speaker-modal" class="fixed inset-0 bg-black/80 speaker-modal z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-gray-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-yellow-400/30">
+            <div class="p-8">
+                <div class="flex justify-between items-start mb-6">
+                    <h2 id="modal-title" class="text-3xl font-bold gradient-text"></h2>
+                    <button onclick="closeModal()" class="text-gray-400 hover:text-white">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div id="modal-content" class="grid md:grid-cols-2 gap-8">
+                    <!-- Dynamic content will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="./assets/MWM-logo.png" alt="MWM Logo" class="h-8 w-auto">
+                        <span class="text-lg font-bold gradient-text">MWM Conference</span>
+                    </div>
+                    <p class="text-gray-400">Transforming lives through the power of a millionaire mindset.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="./index.html" class="hover:text-yellow-400 transition-colors">Home</a></li>
+                        <li><a href="./speakers.html" class="hover:text-yellow-400 transition-colors">Speakers</a></li>
+                        <li><a href="./tickets.html" class="hover:text-yellow-400 transition-colors">Tickets</a></li>
+                        <li><a href="./sponsors.html" class="hover:text-yellow-400 transition-colors">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Get Involved</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="./sponsors.html" class="hover:text-yellow-400 transition-colors">Become a Sponsor</a></li>
+                        <li><a href="./vendors.html" class="hover:text-yellow-400 transition-colors">Vendor Opportunities</a></li>
+                        <li><a href="./volunteers.html" class="hover:text-yellow-400 transition-colors">Volunteer</a></li>
+                        <li><a href="./contact.html" class="hover:text-yellow-400 transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Event Details</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <p>November 16, 2025</p>
+                        <p>Cox Pavilion</p>
+                        <p>Las Vegas, Nevada</p>
+                        <p class="text-yellow-400">info@mwmconference.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Millionaire Wealth Mindset Conference. All rights reserved.</p>
+                <p class="mt-2">Presented by We Paying It Forward 501(c)(3)</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu) menu.classList.toggle('hidden');
+        });
+
+        // Section Fade Animation
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section-fade').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Speaker Modal Data
+        const speakerData = {
+            marquetta: {
+                title: "Marquetta DeVille",
+                subtitle: "International Speaker, Author, Educator, Minister",
+                image: "./assets/marquetta-improved.jpeg",
+                bio: "Marquetta DeVille is a transformational leader who has dedicated her life to empowering others to rise above adversity and embrace their full potential. With a unique blend of ministerial wisdom and practical wealth-building strategies, she has become a sought-after speaker and mentor for entrepreneurs and business leaders worldwide.",
+                achievements: [
+                    "International bestselling author",
+                    "Keynote speaker at 100+ events",
+                    "Founder of multiple successful businesses",
+                    "Mentor to thousands of entrepreneurs",
+                    "Featured in major media outlets"
+                ],
+                topics: ["Financial Freedom", "Legacy Building", "Wealth Transfer", "Ministry", "Entrepreneurship"],
+                quote: "When you bet on yourself, you're not gambling – you're investing in your God-given potential."
+            },
+            king: {
+                title: "King Jermaine Jones",
+                subtitle: "Entrepreneur, VC, Philanthropist",
+                image: "./assets/king-photo.jpg",
+                bio: "King Jermaine Jones' journey from foster care and prison to successful entrepreneur and philanthropist embodies the ultimate 'Bet On You' story. His experiences have shaped him into a powerful advocate for resilience, generosity, and purposeful wealth creation.",
+                achievements: [
+                    "Built multiple successful businesses",
+                    "Active venture capital investor",
+                    "Founder of We Paying It Forward 501(c)(3)",
+                    "Mentored hundreds of entrepreneurs",
+                    "Community leader and advocate"
+                ],
+                topics: ["Wealth Building", "Business Scaling", "Mindset Mastery", "Philanthropy", "Resilience"],
+                quote: "True wealth isn't just about what you accumulate, but what you contribute to the world."
+            },
+            shaundell: {
+                title: "Shaundell Newsome",
+                subtitle: "Award-Winning Founder, Marketing Superhero",
+                image: "./assets/shaundell-newsome-speaking.jpg",
+                bio: "Shaundell Newsome is the award-winning founder of SUMNU Marketing and Sumnu Solutions Zone (SSZ), where he champions marketing strategies and entrepreneurial mentorship for small businesses. Known as a 'Marketing Superhero,' Shaundell has built a legacy of helping companies craft powerful brand stories and measurable marketing results, while fostering a vibrant business community through SSZ's networking events and mentorship programs.",
+                achievements: [
+                    "Award-winning founder of SUMNU Marketing",
+                    "Creator of Sumnu Solutions Zone (SSZ)",
+                    "Marketing strategy expert for small businesses",
+                    "Community networking event organizer",
+                    "Business mentorship program leader"
+                ],
+                topics: ["Marketing Strategy", "Brand Building", "Business Mentorship", "Entrepreneurship"],
+                quote: "Every business has a powerful story waiting to be told – I help them tell it."
+            }
+        };
+
+        // Modal Functions
+        function openModal(speaker) {
+            const modal = document.getElementById('speaker-modal');
+            const title = document.getElementById('modal-title');
+            const content = document.getElementById('modal-content');
+            
+            const data = speakerData[speaker];
+            if (!data) return;
+            
+            title.textContent = data.title;
+            
+            content.innerHTML = `
+                <div>
+                    <img src="${data.image}" alt="${data.title}" class="w-full aspect-square object-cover rounded-xl mb-6">
+                </div>
+                <div>
+                    <h3 class="text-yellow-400 text-xl font-semibold mb-4">${data.subtitle}</h3>
+                    <p class="text-gray-300 leading-relaxed mb-6">${data.bio}</p>
+                    
+                    <h4 class="text-white font-semibold mb-3">Key Achievements:</h4>
+                    <ul class="text-gray-300 space-y-2 mb-6">
+                        ${data.achievements.map(achievement => `<li class="flex items-start"><span class="text-yellow-400 mr-2">•</span>${achievement}</li>`).join('')}
+                    </ul>
+                    
+                    <h4 class="text-white font-semibold mb-3">Speaking Topics:</h4>
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        ${data.topics.map(topic => `<span class="bg-yellow-400 text-black text-sm font-medium px-3 py-1 rounded-full">${topic}</span>`).join('')}
+                    </div>
+                    
+                    <blockquote class="border-l-4 border-yellow-400 pl-4 italic text-gray-300">
+                        "${data.quote}"
+                    </blockquote>
+                </div>
+            `;
+            
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('speaker-modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Close modal on backdrop click
+        document.getElementById('speaker-modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

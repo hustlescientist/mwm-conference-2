@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Millionaire Vegas Chip Photo App</title> <!-- Updated title -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Millionaire Vegas Chip Creator</h1> <!-- Updated title -->
+        <p>Upload your photo and enter your name to get your face on a custom gambling chip!</p>
+
+        <div class="input-group">
+            <label for="userName">Your Name:</label>
+            <input type="text" id="userName" placeholder="e.g., Sarah">
+        </div>
+
+        <div class="upload-area">
+            <input type="file" id="photoUpload" accept="image/*">
+            <label for="photoUpload" class="upload-button">Choose Photo</label>
+            <span id="fileName">No file chosen</span>
+        </div>
+
+        <div class="canvas-container">
+            <canvas id="chipCanvas"></canvas>
+            <p class="instruction">Your chip will appear here after upload.</p>
+        </div>
+
+        <div class="actions">
+            <button id="downloadChip" class="download-button" disabled>Download Your Chip</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

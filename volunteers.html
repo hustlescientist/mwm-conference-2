@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volunteer Opportunities - Millionaire Wealth Mindset Conference 2025</title>
+    <meta name="description" content="Join our volunteer team at the Millionaire Wealth Mindset Conference. Gain valuable experience, network with industry leaders, and be part of transformation.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #f5f5f5;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(251, 191, 36, 0.25);
+        }
+        
+        .section-fade {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        
+        .section-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .volunteer-badge {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            animation: badge-glow 2s ease-in-out infinite;
+        }
+        
+        @keyframes badge-glow {
+            0%, 100% { box-shadow: 0 0 15px rgba(251, 191, 36, 0.4); }
+            50% { box-shadow: 0 0 25px rgba(251, 191, 36, 0.7); }
+        }
+    </style>
+</head>
+<body class="bg-black text-white antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-yellow-400/20">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <img src="./assets/MWM-logo.png" alt="MWM Logo" class="h-10 w-auto">
+                    <span class="text-xl font-bold gradient-text">MWM Conference</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="./index.html" class="text-gray-300 hover:text-yellow-400 transition-colors font-medium">Home</a>
+                    <a href="./index.html#about" class="text-gray-300 hover:text-yellow-400 transition-colors font-medium">About</a>
+                    <a href="./speakers.html" class="text-gray-300 hover:text-yellow-400 transition-colors font-medium">Speakers</a>
+                    <a href="./tickets.html" class="text-gray-300 hover:text-yellow-400 transition-colors font-medium">Tickets</a>
+                    <a href="./sponsors.html" class="text-gray-300 hover:text-yellow-400 transition-colors font-medium">Partners</a>
+                    <a href="./contact.html" class="text-gray-300 hover:text-yellow-400 transition-colors font-medium">Contact</a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 bg-gradient-to-b from-black via-gray-900 to-black">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6 gradient-text">Join Our Volunteer Team</h1>
+            <p class="text-xl text-gray-300 max-w-4xl mx-auto mb-8">
+                Be part of the movement that's transforming lives and building generational wealth. Join our community impact team and help create an unforgettable experience while gaining invaluable connections and skills.
+            </p>
+            
+            <!-- Volunteer Stats -->
+            <div class="grid md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-8">
+                <div class="bg-yellow-400/10 p-4 rounded-xl border border-yellow-400/30">
+                    <div class="text-3xl font-bold text-yellow-400 mb-1">50+</div>
+                    <div class="text-gray-300 text-sm">Volunteer Positions</div>
+                </div>
+                <div class="bg-yellow-400/10 p-4 rounded-xl border border-yellow-400/30">
+                    <div class="text-3xl font-bold text-yellow-400 mb-1">Free</div>
+                    <div class="text-gray-300 text-sm">Event Access</div>
+                </div>
+                <div class="bg-yellow-400/10 p-4 rounded-xl border border-yellow-400/30">
+                    <div class="text-3xl font-bold text-yellow-400 mb-1">VIP</div>
+                    <div class="text-gray-300 text-sm">Networking Access</div>
+                </div>
+                <div class="bg-yellow-400/10 p-4 rounded-xl border border-yellow-400/30">
+                    <div class="text-3xl font-bold text-yellow-400 mb-1">$500</div>
+                    <div class="text-gray-300 text-sm">Value Package</div>
+                </div>
+            </div>
+            
+            <div class="flex items-center justify-center space-x-4 text-gray-400">
+                <span>Make an Impact</span>
+                <span>•</span>
+                <span>Build Your Network</span>
+                <span>•</span>
+                <span>Gain Experience</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Volunteer Section -->
+    <section class="section-fade py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">Why Volunteer with Us?</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Volunteering at the MWM Conference isn't just about giving back – it's about investing in your own growth and future.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="card-hover bg-gray-800/50 rounded-2xl p-8 text-center border border-gray-700 hover:border-yellow-400/50">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-yellow-400/20 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Free Conference Access</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Attend all sessions, keynotes, and networking events at no cost. Experience the full transformation alongside 3000+ entrepreneurs.
+                    </p>
+                </div>
+                
+                <div class="card-hover bg-gray-800/50 rounded-2xl p-8 text-center border border-gray-700 hover:border-yellow-400/50">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-yellow-400/20 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Exclusive Networking</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Connect directly with speakers, sponsors, and industry leaders. Build relationships that could transform your career and business.
+                    </p>
+                </div>
+                
+                <div class="card-hover bg-gray-800/50 rounded-2xl p-8 text-center border border-gray-700 hover:border-yellow-400/50">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-yellow-400/20 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Valuable Experience</h3>
+                    <p class="text-gray-300 leading-relaxed">
+                        Gain hands-on event management experience, leadership skills, and insights into running large-scale conferences.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Additional Benefits -->
+            <div class="bg-gradient-to-r from-yellow-400/10 to-orange-500/10 rounded-2xl p-8 border border-yellow-400/30 max-w-4xl mx-auto">
+                <h3 class="text-3xl font-bold text-yellow-400 mb-6 text-center">Volunteer Perks & Benefits</h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="volunteer-badge w-8 h-8 rounded-full flex items-center justify-center">
+                                <svg class="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.4-1.4-9.6 9.6z"/>
+                                </svg>
+                            </div>
+                            <span class="text-white font-medium">Free conference ticket (value $197+)</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="volunteer-badge w-8 h-8 rounded-full flex items-center justify-center">
+                                <svg class="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.4-1.4-9.6 9.6z"/>
+                                </svg>
+                            </div>
+                            <span class="text-white font-medium">Exclusive volunteer networking reception</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="volunteer-badge w-8 h-8 rounded-full flex items-center justify-center">
+                                <svg class="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.4-1.4-9.6 9.6z"/>
+                                </svg>
+                            </div>
+                            <span class="text-white font-medium">Premium volunteer swag bag</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="volunteer-badge w-8 h-8 rounded-full flex items-center justify-center">
+                                <svg class="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.4-1.4-9.6 9.6z"/>
+                                </svg>
+                            </div>
+                            <span class="text-white font-medium">Meet & greet opportunities with speakers</span>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="volunteer-badge w-8 h-8 rounded-full flex items-center justify-center">
+                                <svg class="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.4-1.4-9.6 9.6z"/>
+                                </svg>
+                            </div>
+                            <span class="text-white font-medium">Professional development certificate</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="volunteer-badge w-8 h-8 rounded-full flex items-center justify-center">
+                                <svg class="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.4-1.4-9.6 9.6z"/>
+                                </svg>
+                            </div>
+                            <span class="text-white font-medium">LinkedIn recommendation from organizers</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="volunteer-badge w-8 h-8 rounded-full flex items-center justify-center">
+                                <svg class="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.4-1.4-9.6 9.6z"/>
+                                </svg>
+                            </div>
+                            <span class="text-white font-medium">Meals and refreshments included</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <div class="volunteer-badge w-8 h-8 rounded-full flex items-center justify-center">
+                                <svg class="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9 16.2l-3.5-3.5L4 14.2 9 19 20 8l-1.4-1.4-9.6 9.6z"/>
+                                </svg>
+                            </div>
+                            <span class="text-white font-medium">Priority access to future events</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Roles -->
+    <section class="section-fade py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">Volunteer Opportunities</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Choose the role that best matches your skills and interests. All positions include training and support.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                
+                <!-- Registration & Check-in -->
+                <div class="card-hover bg-gray-800/50 rounded-2xl p-6 border border-gray-700 hover:border-yellow-400/50">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-blue-500/20 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-blue-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Registration & Check-in</h3>
+                        <span class="bg-blue-500 text-white px-2 py-1 rounded text-xs font-semibold">15 Positions</span>
+                    </div>
+                    <ul class="text-gray-300 space-y-2 text-sm">
+                        <li>• Welcome attendees and provide information</li>
+                        <li>• Distribute badges, programs, and swag bags</li>
+                        <li>• Answer basic event questions</li>
+                        <li>• Direct attendees to sessions and facilities</li>
+                    </ul>
+                    <div class="mt-4 text-center">
+                        <span class="text-yellow-400 font-semibold">⏰ 7:30 AM - 10:00 AM</span>
+                    </div>
+                </div>
+
+                <!-- Guest Services -->
+                <div class="card-hover bg-gray-800/50 rounded-2xl p-6 border border-gray-700 hover:border-yellow-400/50">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-green-500/20 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Guest Services</h3>
+                        <span class="bg-green-500 text-white px-2 py-1 rounded text-xs font-semibold">12 Positions</span>
+                    </div>
+                    <ul class="text-gray-300 space-y-2 text-sm">
+                        <li>• Assist attendees throughout the event</li>
+                        <li>• Coordinate special requests and accommodations</li>
+                        <li>• Manage VIP and Millionaire Circle services</li>
+                        <li>• Facilitate networking introductions</li>
+                    </ul>
+                    <div class="mt-4 text-center">
+                        <span class="text-yellow-400 font-semibold">⏰ 8:00 AM - 7:00 PM</span>
+                    </div>
+                </div>
+
+                <!-- Audio/Visual Support -->
+                <div class="card-hover bg-gray-800/50 rounded-2xl p-6 border border-gray-700 hover:border-yellow-400/50">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-purple-500/20 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-purple-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zM9.5 16.5v-9l7 4.5-7 4.5z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Audio/Visual Support</h3>
+                        <span class="bg-purple-500 text-white px-2 py-1 rounded text-xs font-semibold">8 Positions</span>
+                    </div>
+                    <ul class="text-gray-300 space-y-2 text-sm">
+                        <li>• Support technical setup and operation</li>
+                        <li>• Assist with microphones and presentations</li>
+                        <li>• Help with live streaming coordination</li>
+                        <li>• Basic technical troubleshooting</li>
+                    </ul>
+                    <div class="mt-4 text-center">
+                        <span class="text-yellow-400 font-semibold">⏰ 7:00 AM - 7:00 PM</span>
+                    </div>
+                </div>
+
+                <!-- Networking Events -->
+                <div class="card-hover bg-gray-800/50 rounded-2xl p-6 border border-gray-700 hover:border-yellow-400/50">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-orange-500/20 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Networking Events</h3>
+                        <span class="bg-orange-500 text-white px-2 py-1 rounded text-xs font-semibold">10 Positions</span>
+                    </div>
+                    <ul class="text-gray-300 space-y-2 text-sm">
+                        <li>• Facilitate networking sessions</li>
+                        <li>• Coordinate VIP receptions</li>
+                        <li>• Assist with meet & greet events</li>
+                        <li>• Support social media activities</li>
+                    </ul>
+                    <div class="mt-4 text-center">
+                        <span class="text-yellow-400 font-semibold">⏰ 11:00 AM - 8:00 PM</span>
+                    </div>
+                </div>
+
+                <!-- Vendor Support -->
+                <div class="card-hover bg-gray-800/50 rounded-2xl p-6 border border-gray-700 hover:border-yellow-400/50">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-red-500/20 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-red-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1zM10 6a2 2 0 0 1 4 0v1h-4V6zm8 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2v10z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Vendor Support</h3>
+                        <span class="bg-red-500 text-white px-2 py-1 rounded text-xs font-semibold">6 Positions</span>
+                    </div>
+                    <ul class="text-gray-300 space-y-2 text-sm">
+                        <li>• Assist vendors with setup and breakdown</li>
+                        <li>• Help coordinate vendor activities</li>
+                        <li>• Support expo logistics</li>
+                        <li>• Facilitate vendor-attendee connections</li>
+                    </ul>
+                    <div class="mt-4 text-center">
+                        <span class="text-yellow-400 font-semibold">⏰ 7:00 AM - 8:00 PM</span>
+                    </div>
+                </div>
+
+                <!-- General Support -->
+                <div class="card-hover bg-gray-800/50 rounded-2xl p-6 border border-gray-700 hover:border-yellow-400/50">
+                    <div class="text-center mb-4">
+                        <div class="w-16 h-16 mx-auto mb-4 bg-yellow-500/20 rounded-full flex items-center justify-center">
+                            <svg class="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">General Support</h3>
+                        <span class="bg-yellow-500 text-black px-2 py-1 rounded text-xs font-semibold">15 Positions</span>
+                    </div>
+                    <ul class="text-gray-300 space-y-2 text-sm">
+                        <li>• Float between different areas as needed</li>
+                        <li>• Provide general assistance and information</li>
+                        <li>• Support crowd management</li>
+                        <li>• Emergency response coordination</li>
+                    </ul>
+                    <div class="mt-4 text-center">
+                        <span class="text-yellow-400 font-semibold">⏰ 8:00 AM - 7:00 PM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Application Form -->
+    <section class="section-fade py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">Apply to Volunteer</h2>
+                    <p class="text-xl text-gray-300">
+                        Ready to be part of something transformational? Fill out the application below.
+                    </p>
+                </div>
+
+                <div class="bg-gray-800/50 rounded-2xl p-8 border border-gray-700">
+                    <form id="volunteer-form" class="space-y-6">
+                        <!-- Personal Information -->
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="firstName" class="block text-white font-medium mb-2">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" class="w-full p-4 bg-gray-900 border border-gray-600 rounded-lg text-white focus:border-yellow-400 focus:outline-none transition-colors" required>
+                            </div>
+                            <div>
+                                <label for="lastName" class="block text-white font-medium mb-2">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" class="w-full p-4 bg-gray-900 border border-gray-600 rounded-lg text-white focus:border-yellow-400 focus:outline-none transition-colors" required>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="email" class="block text-white font-medium mb-2">Email Address *</label>
+                                <input type="email" id="email" name="email" class="w-full p-4 bg-gray-900 border border-gray-600 rounded-lg text-white focus:border-yellow-400 focus:outline-none transition-colors" required>
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-white font-medium mb-2">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" class="w-full p-4 bg-gray-900 border border-gray-600 rounded-lg text-white focus:border-yellow-400 focus:outline-none transition-colors" required>
+                            </div>
+                        </div>
+
+                        <!-- Volunteer Preferences -->
+                        <div>
+                            <label for="preferredRole" class="block text-white font-medium mb-2">Preferred Volunteer Role *</label>
+                            <select id="preferredRole" name="preferredRole" class="w-full p-4 bg-gray-900 border border-gray-600 rounded-lg text-white focus:border-yellow-400 focus:outline-none transition-colors" required>
+                                <option value="">Select your preferred role</option>
+                                <option value="registration">Registration & Check-in</option>
+                                <option value="guest-services">Guest Services</option>
+                                <option value="av-support">Audio/Visual Support</option>
+                                <option value="networking">Networking Events</option>
+                                <option value="vendor-support">Vendor Support</option>
+                                <option value="general">General Support</option>
+                                <option value="flexible">Flexible - Any role needed</option>
+                            </select>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="experience" class="block text-white font-medium mb-2">Previous Event Experience</label>
+                                <select id="experience" name="experience" class="w-full p-4 bg-gray-900 border border-gray-600 rounded-lg text-white focus:border-yellow-400 focus:outline-none transition-colors">
+                                    <option value="">Select experience level</option>
+                                    <option value="first-time">First-time volunteer</option>
+                                    <option value="some">Some event experience</option>
+                                    <option value="experienced">Very experienced</option>
+                                    <option value="professional">Professional event background</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="availability" class="block text-white font-medium mb-2">Availability *</label>
+                                <select id="availability" name="availability" class="w-full p-4 bg-gray-900 border border-gray-600 rounded-lg text-white focus:border-yellow-400 focus:outline-none transition-colors" required>
+                                    <option value="">Select availability</option>
+                                    <option value="full-day">Full Day (7 AM - 8 PM)</option>
+                                    <option value="morning">Morning Only (7 AM - 1 PM)</option>
+                                    <option value="afternoon">Afternoon Only (1 PM - 8 PM)</option>
+                                    <option value="evening">Evening Only (4 PM - 8 PM)</option>
+                                    <option value="flexible">Flexible schedule</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Personal Questions -->
+                        <div>
+                            <label for="motivation" class="block text-white font-medium mb-2">Why do you want to volunteer at the MWM Conference? *</label>
+                            <textarea id="motivation" name="motivation" rows="4" class="w-full p-4 bg-gray-900 border border-gray-600 rounded-lg text-white focus:border-yellow-400 focus:outline-none transition-colors resize-vertical" placeholder="Share your motivation and what you hope to gain from this experience..." required></textarea>
+                        </div>
+
+                        <div>
+                            <label for="skills" class="block text-white font-medium mb-2">Special Skills or Qualifications</label>
+                            <textarea id="skills" name="skills" rows="3" class="w-full p-4 bg-gray-900 border border-gray-600 rounded-lg text-white focus:border-yellow-400 focus:outline-none transition-colors resize-vertical" placeholder="Any relevant skills, languages, certifications, or experience that might be helpful..."></textarea>
+                        </div>
+
+                        <!-- Emergency Contact -->
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="emergencyName" class="block text-white font-medium mb-2">Emergency Contact Name *</label>
+                                <input type="text" id="emergencyName" name="emergencyName" class="w-full p-4 bg-gray-900 border border-gray-600 rounded-lg text-white focus:border-yellow-400 focus:outline-none transition-colors" required>
+                            </div>
+                            <div>
+                                <label for="emergencyPhone" class="block text-white font-medium mb-2">Emergency Contact Phone *</label>
+                                <input type="tel" id="emergencyPhone" name="emergencyPhone" class="w-full p-4 bg-gray-900 border border-gray-600 rounded-lg text-white focus:border-yellow-400 focus:outline-none transition-colors" required>
+                            </div>
+                        </div>
+
+                        <!-- Agreements -->
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <input type="checkbox" id="agreement1" name="agreement1" class="mt-1.5 w-4 h-4 text-yellow-400 bg-gray-900 border-gray-600 rounded focus:ring-yellow-400" required>
+                                <label for="agreement1" class="text-gray-300">
+                                    I understand that volunteer positions require a minimum 4-hour commitment and I am available for my selected time slot. *
+                                </label>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <input type="checkbox" id="agreement2" name="agreement2" class="mt-1.5 w-4 h-4 text-yellow-400 bg-gray-900 border-gray-600 rounded focus:ring-yellow-400" required>
+                                <label for="agreement2" class="text-gray-300">
+                                    I agree to follow all event guidelines, dress code, and professional conduct standards. *
+                                </label>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <input type="checkbox" id="newsletter" name="newsletter" class="mt-1.5 w-4 h-4 text-yellow-400 bg-gray-900 border-gray-600 rounded focus:ring-yellow-400">
+                                <label for="newsletter" class="text-gray-300">
+                                    I'd like to receive updates about future MWM events and volunteer opportunities.
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="inline-block px-12 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold text-lg rounded-full shadow-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105">
+                                SUBMIT VOLUNTEER APPLICATION
+                            </button>
+                        </div>
+
+                        <div id="form-status" class="text-center mt-4 hidden">
+                            <!-- Status messages will appear here -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Volunteer Testimonials -->
+    <section class="section-fade py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">What Our Volunteers Say</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-gray-800/50 rounded-2xl p-6 border border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-black font-bold text-lg">S</span>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold">Sarah M.</h4>
+                            <p class="text-gray-400 text-sm">Event Volunteer 2024</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-300 italic">
+                        "Volunteering at MWM was incredible! I made connections that led to new business opportunities and gained insights that transformed my entrepreneurial journey."
+                    </blockquote>
+                </div>
+
+                <div class="bg-gray-800/50 rounded-2xl p-6 border border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-black font-bold text-lg">M</span>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold">Marcus T.</h4>
+                            <p class="text-gray-400 text-sm">AV Support Volunteer</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-300 italic">
+                        "Being behind the scenes gave me unique access to speakers and organizers. The experience I gained was worth more than any ticket price!"
+                    </blockquote>
+                </div>
+
+                <div class="bg-gray-800/50 rounded-2xl p-6 border border-gray-700">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-black font-bold text-lg">A</span>
+                        </div>
+                        <div>
+                            <h4 class="text-white font-semibold">Angela R.</h4>
+                            <p class="text-gray-400 text-sm">Guest Services Lead</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-gray-300 italic">
+                        "The networking opportunities were amazing, and I felt like I was contributing to something meaningful. Can't wait to volunteer again!"
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="./assets/MWM-logo.png" alt="MWM Logo" class="h-8 w-auto">
+                        <span class="text-lg font-bold gradient-text">MWM Conference</span>
+                    </div>
+                    <p class="text-gray-400">Transforming lives through the power of a millionaire mindset.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="./index.html" class="hover:text-yellow-400 transition-colors">Home</a></li>
+                        <li><a href="./speakers.html" class="hover:text-yellow-400 transition-colors">Speakers</a></li>
+                        <li><a href="./tickets.html" class="hover:text-yellow-400 transition-colors">Tickets</a></li>
+                        <li><a href="./sponsors.html" class="hover:text-yellow-400 transition-colors">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Volunteer Info</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#roles" class="hover:text-yellow-400 transition-colors">Volunteer Roles</a></li>
+                        <li><a href="#benefits" class="hover:text-yellow-400 transition-colors">Benefits</a></li>
+                        <li><a href="#application" class="hover:text-yellow-400 transition-colors">Apply Now</a></li>
+                        <li><a href="./contact.html" class="hover:text-yellow-400 transition-colors">Contact Support</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Event Details</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <p>November 16, 2025</p>
+                        <p>Cox Pavilion</p>
+                        <p>Las Vegas, Nevada</p>
+                        <p class="text-yellow-400">volunteers@mwmconference.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Millionaire Wealth Mindset Conference. All rights reserved.</p>
+                <p class="mt-2">Presented by We Paying It Forward 501(c)(3)</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu) menu.classList.toggle('hidden');
+        });
+
+        // Section Fade Animation
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section-fade').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Volunteer Form Handling
+        document.getElementById('volunteer-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formStatus = document.getElementById('form-status');
+            const submitButton = this.querySelector('button[type="submit"]');
+            
+            // Show loading state
+            submitButton.disabled = true;
+            submitButton.textContent = 'SUBMITTING APPLICATION...';
+            formStatus.classList.add('hidden');
+            
+            // Validate required fields
+            const requiredFields = this.querySelectorAll('[required]');
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.classList.add('border-red-500');
+                } else {
+                    field.classList.remove('border-red-500');
+                }
+            });
+            
+            if (!isValid) {
+                formStatus.innerHTML = '<div class="bg-red-500/20 border border-red-500/30 rounded-lg p-4 text-red-400"><strong>Please fill in all required fields.</strong></div>';
+                formStatus.classList.remove('hidden');
+                submitButton.disabled = false;
+                submitButton.textContent = 'SUBMIT VOLUNTEER APPLICATION';
+                return;
+            }
+            
+            // Simulate form submission (replace with actual form handling)
+            setTimeout(() => {
+                formStatus.innerHTML = `
+                    <div class="bg-green-500/20 border border-green-500/30 rounded-lg p-4 text-green-400">
+                        <strong>Application submitted successfully!</strong><br>
+                        Thank you for your interest in volunteering! We'll review your application and contact you within 48 hours with next steps.
+                        <br><br>
+                        <strong>What's next?</strong><br>
+                        • Background check (if required for your role)<br>
+                        • Volunteer orientation session<br>
+                        • Event day training and materials
+                    </div>
+                `;
+                formStatus.classList.remove('hidden');
+                
+                // Reset form
+                this.reset();
+                submitButton.disabled = false;
+                submitButton.textContent = 'SUBMIT VOLUNTEER APPLICATION';
+                
+                // Scroll to success message
+                formStatus.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+            }, 2000);
+        });
+
+        // Form field validation on blur
+        document.querySelectorAll('input[required], select[required], textarea[required]').forEach(field => {
+            field.addEventListener('blur', function() {
+                if (!this.value.trim()) {
+                    this.classList.add('border-red-500');
+                } else {
+                    this.classList.remove('border-red-500');
+                }
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

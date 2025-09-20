@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Millionaire Wealth Mindset Conference 2025 | November 16 | Las Vegas</title>
+    <meta name="description" content="Join 3000+ entrepreneurs at the Millionaire Wealth Mindset Conference. November 16, 2025 at Cox Pavilion, Las Vegas. Transform your mindset, build generational wealth.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="event">
+    <meta property="og:title" content="Millionaire Wealth Mindset Conference 2025">
+    <meta property="og:description" content="A transformative experience for legacy-driven entrepreneurs. It's time to Bet On You.">
+    <meta property="og:image" content="./assets/social-share.jpg">
+    <meta property="og:url" content="https://millionairewealthmindset.com">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Millionaire Wealth Mindset Conference 2025">
+    <meta property="twitter:description" content="Transform your mindset, build generational wealth. November 16, 2025, Las Vegas.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a;
+            color: #f5f5f5;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b, #d97706);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.6) 100%);
+        }
+        
+        .hero-image {
+            background-image: url('./assets/cox-pavilion.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            filter: blur(1px) brightness(0.7);
+        }
+        
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px -12px rgba(251, 191, 36, 0.25);
+        }
+        
+        .pulse-glow {
+            animation: pulse-glow 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(251, 191, 36, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(251, 191, 36, 0.6); }
+        }
+        
+        .floating-chip {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+        
+        .section-fade {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        
+        .section-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: #1a1a1a;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            border-radius: 4px;
+        }
+        
+        .countdown-box {
+            background: rgba(251, 191, 36, 0.1);
+            border: 1px solid rgba(251, 191, 36, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        
+        html {
+            scroll-padding-top: 80px;
+        }
+    </style>
+</head>
+<body class="bg-black text-white antialiased">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-yellow-400/20">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <img src="./assets/MWM-logo.png" alt="MWM Logo" class="h-10 w-auto">
+                    <span class="text-xl font-bold gradient-text">MWM Conference</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-gray-300 hover:text-yellow-400 transition-colors font-medium">Home</a>
+                    <a href="#about" class="text-gray-300 hover:text-yellow-400 transition-colors font-medium">About</a>
+                    <a href="./speakers.html" class="text-gray-300 hover:text-yellow-400 transition-colors font-medium">Speakers</a>
+                    <a href="./tickets.html" class="text-gray-300 hover:text-yellow-400 transition-colors font-medium">Tickets</a>
+                    <a href="./sponsors.html" class="text-gray-300 hover:text-yellow-400 transition-colors font-medium">Partners</a>
+                    <a href="./contact.html" class="text-gray-300 hover:text-yellow-400 transition-colors font-medium">Contact</a>
+                    <a href="./bet-on-you.html" class="ml-4 p-2 bg-yellow-400/20 rounded-full hover:bg-yellow-400/30 transition-colors" title="Create Your Bet On You Chip">
+                        <img src="./assets/bet-on-mwm-symbol-chip.png" alt="Bet On You" class="w-8 h-8">
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 space-y-4">
+                <a href="#home" class="block text-gray-300 hover:text-yellow-400 transition-colors">Home</a>
+                <a href="#about" class="block text-gray-300 hover:text-yellow-400 transition-colors">About</a>
+                <a href="./speakers.html" class="block text-gray-300 hover:text-yellow-400 transition-colors">Speakers</a>
+                <a href="./tickets.html" class="block text-gray-300 hover:text-yellow-400 transition-colors">Tickets</a>
+                <a href="./sponsors.html" class="block text-gray-300 hover:text-yellow-400 transition-colors">Partners</a>
+                <a href="./contact.html" class="block text-gray-300 hover:text-yellow-400 transition-colors">Contact</a>
+                <a href="./bet-on-you.html" class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300 transition-colors font-medium">
+                    <img src="./assets/bet-on-mwm-symbol-chip.png" alt="Bet On You" class="w-6 h-6">
+                    <span>Create Your Chip</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <!-- Hero Background Image -->
+        <div class="absolute inset-0 hero-image opacity-50"></div>
+        
+        <!-- Hero Background Overlay -->
+        <div class="absolute inset-0 hero-bg"></div>
+        
+        <!-- Floating Chip Animation -->
+        <div class="absolute top-32 right-8 md:top-24 md:right-20 floating-chip opacity-40">
+            <img src="./assets/bet-on-mwm-symbol-chip.png" alt="MWM Chip" class="w-20 h-20 md:w-28 md:h-28">
+        </div>
+        
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center px-4 max-w-6xl mx-auto mt-8">
+            
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 gradient-text leading-tight">
+                Millionaire Wealth Mindset
+            </h1>
+            
+            <h2 class="text-3xl md:text-4xl font-light text-gray-300 mb-6">
+                It's Time to <span class="text-yellow-400 font-semibold">Bet On You.</span>
+            </h2>
+            
+            <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8 leading-relaxed">
+                A transformative, full-day immersive experience for legacy-driven entrepreneurs ready to ignite inner power, amplify their mindset, and invest in their future.
+            </p>
+            
+            <!-- Event Details -->
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-8">
+                <div class="flex items-center space-x-2 text-gray-300">
+                    <svg class="h-6 w-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                    </svg>
+                    <span class="font-medium text-lg">November 16, 2025</span>
+                </div>
+                <div class="flex items-center space-x-2 text-gray-300">
+                    <svg class="h-6 w-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    <span class="font-medium text-lg">Cox Pavilion, Las Vegas, NV</span>
+                </div>
+            </div>
+            
+            <!-- Countdown Timer -->
+            <div class="mb-8">
+                <div class="countdown-box rounded-2xl p-6 max-w-2xl mx-auto">
+                    <h3 class="text-yellow-400 font-semibold mb-4 text-lg">Event Countdown</h3>
+                    <div id="countdown" class="grid grid-cols-4 gap-4 text-center">
+                        <div>
+                            <div id="days" class="text-3xl font-bold text-white">000</div>
+                            <div class="text-yellow-400 text-sm">Days</div>
+                        </div>
+                        <div>
+                            <div id="hours" class="text-3xl font-bold text-white">00</div>
+                            <div class="text-yellow-400 text-sm">Hours</div>
+                        </div>
+                        <div>
+                            <div id="minutes" class="text-3xl font-bold text-white">00</div>
+                            <div class="text-yellow-400 text-sm">Minutes</div>
+                        </div>
+                        <div>
+                            <div id="seconds" class="text-3xl font-bold text-white">00</div>
+                            <div class="text-yellow-400 text-sm">Seconds</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Social Proof -->
+            <div class="mb-8">
+                <div class="flex items-center justify-center space-x-4 text-gray-300">
+                    <svg class="h-5 w-5 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                    </svg>
+                    <span>Join <span id="attendee-count" class="text-yellow-400 font-semibold">847</span>+ registered visionaries</span>
+                </div>
+            </div>
+            
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://posh.vip/e/millionaire-wealth-mindset" target="_blank" class="inline-block px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold text-lg rounded-full shadow-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105">
+                    GET TICKETS NOW
+                </a>
+                <a href="#about" class="inline-block px-8 py-4 border-2 border-yellow-400 text-yellow-400 font-bold text-lg rounded-full hover:bg-yellow-400 hover:text-black transition-all duration-300">
+                    LEARN MORE
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-fade py-20 bg-gradient-to-b from-black to-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">
+                    Transform Your Mindset, Transform Your Life
+                </h2>
+                <p class="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                    The Millionaire Wealth Mindset Conference is a faith-driven event designed to empower entrepreneurs, leaders, and visionaries. Our mission is to build generational wealth through purpose and strategy.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700 hover:border-yellow-400/50 text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-yellow-400/20 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4">Join a Tribe of Visionaries</h3>
+                    <p class="text-gray-300">Connect with 3000+ ambitious individuals committed to betting big on their future and building legacies.</p>
+                </div>
+                
+                <div class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700 hover:border-yellow-400/50 text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-yellow-400/20 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4">Fuel Your Growth Mindset</h3>
+                    <p class="text-gray-300">Immerse in an environment celebrating personal growth and decisive action, attracting those ready to invest in their potential.</p>
+                </div>
+                
+                <div class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700 hover:border-yellow-400/50 text-center">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-yellow-400/20 rounded-full flex items-center justify-center">
+                        <svg class="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-yellow-400 mb-4">Align Purpose, Power & Profits</h3>
+                    <p class="text-gray-300">Discover how self-belief and clear purpose drive generational wealth and profound fulfillment.</p>
+                </div>
+            </div>
+            
+            <!-- Stats Section -->
+            <div class="grid md:grid-cols-4 gap-8 text-center">
+                <div class="card-hover bg-yellow-400/10 p-6 rounded-xl border border-yellow-400/30">
+                    <div class="text-4xl font-bold text-yellow-400 mb-2">7</div>
+                    <div class="text-gray-300">Hours of Content</div>
+                </div>
+                <div class="card-hover bg-yellow-400/10 p-6 rounded-xl border border-yellow-400/30">
+                    <div class="text-4xl font-bold text-yellow-400 mb-2">3000+</div>
+                    <div class="text-gray-300">Expected Attendees</div>
+                </div>
+                <div class="card-hover bg-yellow-400/10 p-6 rounded-xl border border-yellow-400/30">
+                    <div class="text-4xl font-bold text-yellow-400 mb-2">10+</div>
+                    <div class="text-gray-300">Expert Speakers</div>
+                </div>
+                <div class="card-hover bg-yellow-400/10 p-6 rounded-xl border border-yellow-400/30">
+                    <div class="text-4xl font-bold text-yellow-400 mb-2">1</div>
+                    <div class="text-gray-300">Life-Changing Day</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Founders Section -->
+    <section id="founders" class="section-fade py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">Meet Your Founders</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Two visionary leaders who turned adversity into abundance and now dedicate their lives to empowering others.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <!-- Marquetta DeVille -->
+                <div class="card-hover bg-gray-800/50 rounded-2xl overflow-hidden border border-gray-700 hover:border-yellow-400/50">
+                    <div class="aspect-[4/5] overflow-hidden">
+                        <img src="./assets/marquetta-improved.jpeg" alt="Marquetta DeVille" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-3xl font-bold text-white mb-2">Marquetta DeVille</h3>
+                        <p class="text-yellow-400 text-lg font-medium mb-4">International Speaker, Author, Educator, Minister</p>
+                        <p class="text-gray-300 leading-relaxed mb-6">
+                            Marquetta DeVille is on a mission to inspire others to rise above adversity and embrace possibility. Blending ministry with proven wealth mindset principles, she empowers you to "Bet On You" and build lasting generational wealth.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-yellow-400 text-black text-sm font-semibold px-3 py-1 rounded-full">Financial Freedom</span>
+                            <span class="bg-yellow-400 text-black text-sm font-semibold px-3 py-1 rounded-full">Legacy Building</span>
+                            <span class="bg-yellow-400 text-black text-sm font-semibold px-3 py-1 rounded-full">Wealth Transfer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- King Jermaine Jones -->
+                <div class="card-hover bg-gray-800/50 rounded-2xl overflow-hidden border border-gray-700 hover:border-yellow-400/50">
+                    <div class="aspect-[4/5] overflow-hidden">
+                        <img src="./assets/king-photo.jpg" alt="King Jermaine Jones" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-3xl font-bold text-white mb-2">King Jermaine Jones</h3>
+                        <p class="text-yellow-400 text-lg font-medium mb-4">Entrepreneur, VC, Philanthropist</p>
+                        <p class="text-gray-300 leading-relaxed mb-6">
+                            From adversity, King Jermaine Jones emerged with purpose. His journey is the ultimate "Bet On You" story, building a successful empire against all odds. He now inspires others to cultivate generosity, resilience, and architect wealthy, purposeful lives.
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-yellow-400 text-black text-sm font-semibold px-3 py-1 rounded-full">Wealth Building</span>
+                            <span class="bg-yellow-400 text-black text-sm font-semibold px-3 py-1 rounded-full">Business Scaling</span>
+                            <span class="bg-yellow-400 text-black text-sm font-semibold px-3 py-1 rounded-full">Mindset Mastery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Tickets Preview -->
+    <section id="tickets-preview" class="section-fade py-20 bg-gradient-to-b from-gray-900 to-black">
+        <div class="container mx-auto px-4 text-center">
+            <div class="mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">Secure Your Transformation</h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Choose your investment level and join thousands of entrepreneurs ready to build generational wealth.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+                <!-- General Admission -->
+                <div class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700 hover:border-yellow-400/50">
+                    <h3 class="text-2xl font-bold text-white mb-2">General Admission</h3>
+                    <div class="text-4xl font-bold text-yellow-400 mb-4">$197</div>
+                    <p class="text-gray-400 mb-6">Full Conference Access</p>
+                    <div class="text-red-400 font-semibold mb-4">⚡ Only 234 seats left!</div>
+                </div>
+                
+                <!-- VIP Access -->
+                <div class="card-hover bg-gradient-to-b from-yellow-400/10 to-orange-500/10 p-8 rounded-2xl border-2 border-yellow-400 relative">
+                    <div class="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                        <span class="bg-yellow-400 text-black px-4 py-1 rounded-full text-sm font-bold">MOST POPULAR</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">VIP Experience</h3>
+                    <div class="text-4xl font-bold text-yellow-400 mb-4">$555</div>
+                    <p class="text-gray-400 mb-6">Premium Access + Networking</p>
+                    <div class="text-red-400 font-semibold mb-4">⚡ Only 89 seats left!</div>
+                </div>
+                
+                <!-- Millionaire Circle -->
+                <div class="card-hover bg-gray-800/50 p-8 rounded-2xl border border-gray-700 hover:border-yellow-400/50">
+                    <h3 class="text-2xl font-bold text-white mb-2">Millionaire Circle</h3>
+                    <div class="text-4xl font-bold text-yellow-400 mb-4">$1,111</div>
+                    <p class="text-gray-400 mb-6">Elite Transformation Package</p>
+                    <div class="text-red-400 font-semibold mb-4">⚡ Only 21 seats left!</div>
+                </div>
+            </div>
+
+            <a href="https://posh.vip/e/millionaire-wealth-mindset" target="_blank" class="inline-block px-12 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-bold text-xl rounded-full shadow-lg hover:from-yellow-500 hover:to-orange-600 transition-all duration-300 transform hover:scale-105">
+                VIEW ALL TICKET OPTIONS
+            </a>
+        </div>
+    </section>
+
+    <!-- Partners & Sponsors Section -->
+    <section class="section-fade py-20 bg-gray-900">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 gradient-text">Partners & Sponsors</h2>
+                <p class="text-gray-300 max-w-3xl mx-auto">
+                    Proud to collaborate with leading organizations and premier sponsors who share our vision of wealth building and community empowerment.
+                </p>
+            </div>
+            
+            <!-- Premier Partners Row -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold text-yellow-400 mb-8 text-center">Premier Sponsors</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 items-center justify-items-center max-w-6xl mx-auto">
+                    <div class="card-hover bg-white p-4 rounded-xl border border-gray-700 hover:border-yellow-400/50 flex items-center justify-center h-20 w-full shadow-lg">
+                        <img src="./assets/partner-logo-1.png" alt="Premier Partner 1" class="max-h-12 max-w-full object-contain">
+                    </div>
+                    <div class="card-hover bg-white p-4 rounded-xl border border-gray-700 hover:border-yellow-400/50 flex items-center justify-center h-20 w-full shadow-lg">
+                        <img src="./assets/partner-logo-2.png" alt="Premier Partner 2" class="max-h-12 max-w-full object-contain">
+                    </div>
+                    <div class="card-hover bg-white p-4 rounded-xl border border-gray-700 hover:border-yellow-400/50 flex items-center justify-center h-20 w-full shadow-lg">
+                        <img src="./assets/partner-logo-3.png" alt="Premier Partner 3" class="max-h-12 max-w-full object-contain">
+                    </div>
+                    <div class="card-hover bg-white p-4 rounded-xl border border-gray-700 hover:border-yellow-400/50 flex items-center justify-center h-20 w-full shadow-lg">
+                        <img src="./assets/partner-logo-4.png" alt="Premier Partner 4" class="max-h-12 max-w-full object-contain">
+                    </div>
+                    <div class="card-hover bg-white p-4 rounded-xl border border-gray-700 hover:border-yellow-400/50 flex items-center justify-center h-20 w-full shadow-lg">
+                        <img src="./assets/partner-logo-5.png" alt="Premier Partner 5" class="max-h-12 max-w-full object-contain">
+                    </div>
+                    <div class="card-hover bg-white p-4 rounded-xl border border-gray-700 hover:border-yellow-400/50 flex items-center justify-center h-20 w-full shadow-lg">
+                        <img src="./assets/partner-logo-6.png" alt="Premier Partner 6" class="max-h-12 max-w-full object-contain">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Supporting Partners Row -->
+            <div>
+                <h3 class="text-2xl font-bold text-yellow-400 mb-8 text-center">Supporting Partners</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center justify-items-center max-w-5xl mx-auto">
+                    <div class="card-hover bg-white/10 p-6 rounded-xl border border-gray-700 hover:border-yellow-400/50 flex items-center justify-center h-24">
+                        <img src="./assets/logo-nevada-partners.webp" alt="Nevada Partners" class="max-h-16 max-w-full object-contain">
+                    </div>
+                    <div class="card-hover bg-white/10 p-6 rounded-xl border border-gray-700 hover:border-yellow-400/50 flex items-center justify-center h-24">
+                        <img src="./assets/logo-unlv-tourism-business-igniter.webp" alt="UNLV Tourism Business Igniter" class="max-h-16 max-w-full object-contain">
+                    </div>
+                    <div class="card-hover bg-white/10 p-6 rounded-xl border border-gray-700 hover:border-yellow-400/50 flex items-center justify-center h-24">
+                        <img src="./assets/logo-sumnu-marketing.png" alt="SUMNU Marketing" class="max-h-16 max-w-full object-contain">
+                    </div>
+                    <div class="card-hover bg-white/10 p-6 rounded-xl border border-gray-700 hover:border-yellow-400/50 flex items-center justify-center h-24">
+                        <img src="./assets/logo-promise-startups.jpeg" alt="Promise Startups" class="max-h-16 max-w-full object-contain">
+                    </div>
+                    <div class="card-hover bg-white/10 p-6 rounded-xl border border-gray-700 hover:border-yellow-400/50 flex items-center justify-center h-24">
+                        <img src="./assets/logo-dr-fish-spa.jpg" alt="Dr. Fish Spa" class="max-h-16 max-w-full object-contain">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <a href="./sponsors.html" class="inline-block px-8 py-3 border-2 border-yellow-400 text-yellow-400 font-bold rounded-full hover:bg-yellow-400 hover:text-black transition-all duration-300">
+                    BECOME A PARTNER
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-gray-800 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <img src="./assets/MWM-logo.png" alt="MWM Logo" class="h-8 w-auto">
+                        <span class="text-lg font-bold gradient-text">MWM Conference</span>
+                    </div>
+                    <p class="text-gray-400">Transforming lives through the power of a millionaire mindset.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#about" class="hover:text-yellow-400 transition-colors">About</a></li>
+                        <li><a href="./speakers.html" class="hover:text-yellow-400 transition-colors">Speakers</a></li>
+                        <li><a href="./tickets.html" class="hover:text-yellow-400 transition-colors">Tickets</a></li>
+                        <li><a href="./sponsors.html" class="hover:text-yellow-400 transition-colors">Partners</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Get Involved</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="./sponsors.html" class="hover:text-yellow-400 transition-colors">Become a Sponsor</a></li>
+                        <li><a href="./vendors.html" class="hover:text-yellow-400 transition-colors">Vendor Opportunities</a></li>
+                        <li><a href="./volunteers.html" class="hover:text-yellow-400 transition-colors">Volunteer</a></li>
+                        <li><a href="./contact.html" class="hover:text-yellow-400 transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Event Details</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <p>November 16, 2025</p>
+                        <p>Cox Pavilion</p>
+                        <p>Las Vegas, Nevada</p>
+                        <p class="text-yellow-400">info@mwmconference.com</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 Millionaire Wealth Mindset Conference. All rights reserved.</p>
+                <p class="mt-2">Presented by We Paying It Forward 501(c)(3)</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Countdown Timer
+        function updateCountdown() {
+            const eventDate = new Date('2025-11-16T09:00:00-08:00').getTime();
+            const now = new Date().getTime();
+            const timeLeft = eventDate - now;
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById('days').textContent = days.toString().padStart(3, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+
+            if (timeLeft < 0) {
+                document.getElementById('countdown').innerHTML = '<div class="text-2xl font-bold text-yellow-400">Event is Live!</div>';
+            }
+        }
+
+        // Update countdown every second
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Attendee Counter Animation
+        function animateCounter() {
+            const counter = document.getElementById('attendee-count');
+            let count = 847;
+            const increment = Math.random() > 0.7 ? 1 : 0;
+            
+            if (increment) {
+                count += 1;
+                counter.textContent = count;
+            }
+        }
+
+        // Update attendee count every 10-30 seconds
+        setInterval(animateCounter, Math.random() * 20000 + 10000);
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Section Fade Animation
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section-fade').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Exit Intent Popup (simplified)
+        let exitIntentShown = false;
+        document.addEventListener('mouseleave', function(e) {
+            if (!exitIntentShown && e.clientY <= 0) {
+                exitIntentShown = true;
+                // Could trigger a modal here
+                console.log('Exit intent detected - could show special offer modal');
+            }
+        });
+    </script>
+</body>
+</html>
